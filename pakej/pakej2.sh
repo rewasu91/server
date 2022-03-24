@@ -428,7 +428,7 @@ rm -f /etc/ip
 rm -f /root/tmp
 history -c
 
-echo "2" > /home/ver
+echo "1" > /home/ver
 clear
 echo -e ""
 echo -e ""
