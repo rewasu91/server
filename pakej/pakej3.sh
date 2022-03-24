@@ -154,7 +154,7 @@ echo -e "${D1}        Memasang Servis SSH & OPENVPN        ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————————————${R}"
@@ -170,7 +170,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis SSR             ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/ssr.sh && chmod +x ssr.sh && ./ssr.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ssr.sh && chmod +x ssr.sh && ./ssr.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -186,7 +186,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}        Memasang Servis Shadowsocksobfs      ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -202,7 +202,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}           Memasang Servis Wireguard         ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/wg.sh && chmod +x wg.sh && ./wg.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/wg.sh && chmod +x wg.sh && ./wg.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -218,7 +218,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis Xray            ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -234,7 +234,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis V2ray           ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -250,7 +250,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis Backup          ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -265,7 +265,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis WebSocket       ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/ws.sh && chmod +x ws.sh && ./ws.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ws.sh && chmod +x ws.sh && ./ws.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -281,7 +281,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis OHP             ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -297,7 +297,7 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}             Memasang Servis Cert            ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
-wget https://raw.githubusercontent.com/rewasu91/server/main/install/cert.sh && chmod +x cert.sh && ./cert.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/cert.sh && chmod +x cert.sh && ./cert.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————${R}"
@@ -309,7 +309,75 @@ sleep 2
 clear
 
 apt install linux-headers-cloud-amd64 -y
-apt install --reinstall wireguard-dkms
+apt install --reinstall wireguard-dkms -y
+
+cat > /etc/init.d/my-start-script <<EOL
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:       my-start-script
+# Required-Start:    \$local_fs \$syslog
+# Required-Stop:     \$local_fs \$syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: starts my-start-script
+# Description:       starts my-start-script using start-stop-daemon
+### END INIT INFO
+chmod +x /etc/stunnel/stunnel.pem
+systemctl restart stunnel4
+systemctl start stunnel4
+systemctl daemon-reload
+systemctl start v2ray@none.service
+systemctl enable v2ray@none.service
+systemctl restart v2ray@none.service
+systemctl start v2ray@vless.service
+systemctl enable v2ray@vless.service
+systemctl restart v2ray@vless.service
+systemctl start v2ray@vnone.service
+systemctl enable v2ray@vnone.service
+systemctl restart v2ray@vnone.service
+systemctl start v2ray@mkcp.service
+systemctl enable v2ray@mkcp.service
+systemctl restart v2ray@mkcp.service
+systemctl start v2ray.service
+systemctl enable v2ray.service
+systemctl restart v2ray.service
+systemctl start trojan.service
+systemctl enable trojan.service
+systemctl restart trojan.service
+systemctl start xrayvmesstls
+systemctl enable xrayvmesstls
+systemctl restart xrayvmesstls
+systemctl start xrayvmessnonetls
+systemctl enable xrayvmessnonetls
+systemctl restart xrayvmessnonetls
+systemctl start xrayvmessmkcp
+systemctl enable xrayvmessmkcp
+systemctl restart xrayvmessmkcp
+systemctl start xrayvlesstls
+systemctl enable xrayvlesstls
+systemctl restart xrayvlesstls
+systemctl start xrayvlessnonetls
+systemctl enable xrayvlessnonetls
+systemctl restart xrayvlessnonetls
+systemctl start xrayxtls
+systemctl enable xrayxtls
+systemctl restart xrayxtls
+systemctl start xraytrojan
+systemctl enable xraytrojan
+systemctl restart xraytrojan
+systemctl start xrayvmessgrpc
+systemctl enable xrayvmessgrpc
+systemctl restart xrayvmessgrpc
+systemctl start xrayvlessgrpc
+systemctl enable xrayvlessgrpc
+systemctl restart xrayvlessgrpc
+systemctl start xraytrojangrpc
+systemctl enable xraytrojangrpc
+systemctl restart xraytrojangrpc
+exit 0
+EOL
+chmod 755 /etc/init.d/my-start-script
+update-rc.d my-start-script defaults
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/ssr.sh
@@ -423,27 +491,54 @@ echo -e "———————————————————————�
 echo -e ""
 
 systemctl daemon-reload
-systemctl enable xrayvmesstls.service
-systemctl start xrayvmesstls.service
-systemctl enable xrayvmessnonetls.service
-systemctl start xrayvmessnonetls.service
-systemctl enable xrayvmessmkcp.service
-systemctl start xrayvmessmkcp.service
-systemctl enable xrayvlesstls.service
-systemctl start xrayvlesstls.service
-systemctl enable xrayvlessnonetls.service
-systemctl start xrayvlessnonetls.service
-systemctl restart xrayxtls.service
-systemctl enable xrayxtls.service
-systemctl enable xraytrojan.service
-systemctl start xraytrojan.service
-systemctl enable xrayvmessgrpc.service
-systemctl restart xrayvmessgrpc.service
-systemctl enable xrayvlessgrpc.service
-systemctl restart xrayvlessgrpc.service
-systemctl enable xraytrojangrpc.service
-systemctl restart xraytrojangrpc.service
-clear
+systemctl start v2ray@none.service
+systemctl enable v2ray@none.service
+systemctl restart v2ray@none.service
+systemctl start v2ray@vless.service
+systemctl enable v2ray@vless.service
+systemctl restart v2ray@vless.service
+systemctl start v2ray@vnone.service
+systemctl enable v2ray@vnone.service
+systemctl restart v2ray@vnone.service
+systemctl start v2ray@mkcp.service
+systemctl enable v2ray@mkcp.service
+systemctl restart v2ray@mkcp.service
+systemctl start v2ray.service
+systemctl enable v2ray.service
+systemctl restart v2ray.service
+systemctl start trojan.service
+systemctl enable trojan.service
+systemctl restart trojan.service
+systemctl start xrayvmesstls
+systemctl enable xrayvmesstls
+systemctl restart xrayvmesstls
+systemctl start xrayvmessnonetls
+systemctl enable xrayvmessnonetls
+systemctl restart xrayvmessnonetls
+systemctl start xrayvmessmkcp
+systemctl enable xrayvmessmkcp
+systemctl restart xrayvmessmkcp
+systemctl start xrayvlesstls
+systemctl enable xrayvlesstls
+systemctl restart xrayvlesstls
+systemctl start xrayvlessnonetls
+systemctl enable xrayvlessnonetls
+systemctl restart xrayvlessnonetls
+systemctl start xrayxtls
+systemctl enable xrayxtls
+systemctl restart xrayxtls
+systemctl start xraytrojan
+systemctl enable xraytrojan
+systemctl restart xraytrojan
+systemctl start xrayvmessgrpc
+systemctl enable xrayvmessgrpc
+systemctl restart xrayvmessgrpc
+systemctl start xrayvlessgrpc
+systemctl enable xrayvlessgrpc
+systemctl restart xrayvlessgrpc
+systemctl start xraytrojangrpc
+systemctl enable xraytrojangrpc
+systemctl restart xraytrojangrpc
 
 rm -f setup.sh
 rm -f /root/.bash_history
