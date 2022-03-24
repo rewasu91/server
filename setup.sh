@@ -114,9 +114,55 @@ echo -e "     * [08] Pakej 8 - Core Xray [A,B,D,F]                    *"
 echo -e "     * [09] Pakej 9 - Core V2ray + Trojan Go [A,B,D,E,G]     *"
 echo -e "     * [10] Pakej 10 - Core Xray + Trojan Go [A,B,D,F,G]     *"
 echo -e "     —————————————————————————————————————————————————————————"
-echo -e "     * PROSES PEMASANGAN SKRIP AKAN BERMULA SEBENTAR LAGI..  *"
-echo -e "     *                  TERIMA KASIH BOSKU!                  *"
-echo -e "     —————————————————————————————————————————————————————————"
+read -p "     ► Sila masukkan nombor pilihan anda [1-10]: " pilihan
 echo -e ""
-sleep 8
+
+case $pilihan in
+1)
 clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej1.sh && chmod +x pakej1.sh && ./pakej1.sh
+;;
+2)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej2.sh && chmod +x pakej2.sh && ./pakej2.sh
+;;
+3)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej3.sh && chmod +x pakej3.sh && ./pakej3.sh
+;;
+4)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej4.sh && chmod +x pakej4.sh && ./pakej4.sh
+;;
+5)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej5.sh && chmod +x pakej5.sh && ./pakej5.sh
+;;
+6)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej6.sh && chmod +x pakej6.sh && ./pakej6.sh
+;;
+*)
+7)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej7.sh && chmod +x pakej7.sh && ./pakej7.sh
+;;
+8)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej8.sh && chmod +x pakej8.sh && ./pakej8.sh
+;;
+9)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej9.sh && chmod +x pakej9.sh && ./pakej9.sh
+;;
+*)
+10)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej10.sh && chmod +x pakej10.sh && ./pakej10.sh
+;;
+*)
+echo " Sila masukkan nombor yang betul!"
+sleep 1
+setup
+;;
+esac
