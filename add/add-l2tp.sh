@@ -1,5 +1,18 @@
 #!/bin/bash
 
+#text,A=Merah,B=Hijau,C=Magenta,D=Cyan
+A='\033[1;31m'
+B='\033[1;32m'
+C='\033[1;35m'
+D='\033[1;36m'
+#background,A1=Merah,B1=Hijau,C1=Magenta,D1=Cyan
+A1='\033[1;41m'
+B1='\033[1;42m'
+C1='\033[1;45m'
+D1='\033[1;46m'
+#reset
+R='\033[0m'
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://raw.githubusercontent.com/rewasu91/public/main/ipaddress.sh | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
@@ -22,19 +35,6 @@ sleep 3
 clear
 exit 0
 fi
-
-#text,A=Merah,B=Hijau,C=Magenta,D=Cyan
-A='\033[1;31m'
-B='\033[1;32m'
-C='\033[1;35m'
-D='\033[1;36m'
-#background,A1=Merah,B1=Hijau,C1=Magenta,D1=Cyan
-A1='\033[1;41m'
-B1='\033[1;42m'
-C1='\033[1;45m'
-D1='\033[1;46m'
-#reset
-R='\033[0m'
 
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
