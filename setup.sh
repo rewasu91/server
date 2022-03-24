@@ -91,24 +91,20 @@ echo -e "     *                                                       *"
 echo -e "     * Sila pilih pakej servis yang anda ingin pasang:-      *"
 echo -e "     *                                                       *"
 echo -e "     * Versi Semua Servis                                    *"
-echo -e "     * [01] Pakej 1 - Semua Servis [A,B,C,D,E,F,G]           *"
-echo -e "     * [02] Pakej 2 - Kecuali Trojan Go [A,B,C,D,E,F]        *"
-echo -e "     * [03] Pakej 3 - Kecuali Trojan Go, L2TP, SSTP, PPTP    *"
-echo -e "     *                [A,B,D,E,F] (Hot Pick & Recommended)   *"
+echo -e "     * [1] Pakej 1 - Semua Servis [A,B,C,D,E,F,G]            *"
+echo -e "     * [2] Pakej 2 - Kecuali Trojan Go [A,B,C,D,E,F]         *"
+echo -e "     * [3] Pakej 3 - Kecuali Trojan Go, L2TP, SSTP, PPTP     *"
+echo -e "     *               [A,B,D,E,F] (Hot Pick)                  *"
 echo -e "     *                                                       *"
-echo -e "     * Versi Termasuk L2TP, SSTP, PPTP                       *"
-echo -e "     * [04] Pakej 4 - Core V2ray [A,B,C,D,E]                 *"
-echo -e "     * [05] Pakej 5 - Core Xray [A,B,C,D,F]                  *"
-echo -e "     * [06] Pakej 6 - Core V2ray + Trojan Go [A,B,C,D,E,G]   *"
-echo -e "     * [07] Pakej 7 - Core Xray + Trojan Go [A,B,C,D,F,G]    *"
+echo -e "     * Versi Termasuk L2TP, SSTP, PPTP, Tidak Termasuk V2ray *"
+echo -e "     * [4] Pakej 4 - Core Xray [A,B,C,D,F]                   *"
+echo -e "     * [5] Pakej 5 - Core Xray + Trojan Go [A,B,C,D,F,G]     *"
 echo -e "     *                                                       *"
-echo -e "     * Versi Tidak Termasuk L2TP, SSTP, PPTP                 *"
-echo -e "     * [08] Pakej 8 - Core V2ray [A,B,D,E]                   *"
-echo -e "     * [09] Pakej 9 - Core Xray [A,B,D,F]                    *"
-echo -e "     * [10] Pakej 10 - Core V2ray + Trojan Go [A,B,D,E,G]    *"
-echo -e "     * [11] Pakej 11 - Core Xray + Trojan Go [A,B,D,F,G]     *"
+echo -e "     * Versi Tidak Termasuk L2TP, SSTP, PPTP, V2ray          *"
+echo -e "     * [6] Pakej 6 - Core Xray [A,B,D,F] (Hot Pick)          *"
+echo -e "     * [7] Pakej 7 - Core Xray + Trojan Go [A,B,D,F,G]       *"
 echo -e "     —————————————————————————————————————————————————————————"
-read -p "     ► Sila masukkan nombor pilihan anda [1-11]: " pilihan
+read -p "     ► Sila masukkan nombor pilihan anda [1-7]: " pilihan
 echo -e ""
 
 case $pilihan in
@@ -140,23 +136,6 @@ wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej6.sh && c
 7)
 clear
 wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej7.sh && chmod +x pakej7.sh && ./pakej7.sh
-;;
-8)
-clear
-wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej8.sh && chmod +x pakej8.sh && ./pakej8.sh
-;;
-9)
-clear
-wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej9.sh && chmod +x pakej9.sh && ./pakej9.sh
-;;
-*)
-10)
-clear
-wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej10.sh && chmod +x pakej10.sh && ./pakej10.sh
-;;
-11)
-clear
-wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej11.sh && chmod +x pakej11.sh && ./pakej11.sh
 ;;
 *)
 echo " Sila masukkan nombor yang betul!"
