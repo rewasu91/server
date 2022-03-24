@@ -63,24 +63,34 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <br>
 </b>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/95635242/147498311-aa34cfab-0807-4073-8504-b43fa18770da.png" width="400" title="Debian9-11"><br>
+ <img src="https://user-images.githubusercontent.com/95635242/159989601-9dc60519-04ca-40f3-b381-f65d32445a48.png" width="400" title="Running"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498348-7a22762d-7157-4046-8491-351e4140df0a.png" width="400" title="Ubuntu18-21"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159987770-24328730-c226-42c8-8a25-b795a759a513.png" width="400" title="Menu1"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498424-514a5a68-d620-45a1-8ffb-9eec9e08925b.png" width="400" title="men7"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159988092-49119c83-522d-4024-a313-f95317f5f96c.png" width="400" title="Menu2"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498441-68af5928-e9c9-4706-9b62-3e7b97974dcd.png" width="400" title="men2"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159988106-b1497a5a-dfc0-4479-8be8-24bfa6b00ce3.png width="400" title="Menu3"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498493-c9adc133-872e-4a7b-a050-aaba44f6ce69.png" width="400" title="men8"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159989272-f002f3ea-fd35-420a-8fb0-e0172d811eb0.png" width="400" title="A4"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498547-4c9150c6-57d5-4702-ad91-263b3c18d58d.png" width="400" title="men1"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159989320-bc2b13b4-d10a-4ed7-94d2-9aeeaa1fa552.png" width="400" title="A5"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498570-c6f8f18a-2b0d-4522-9741-0f8197e7743b.png" width="400" title="men3"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159989344-01286a81-9302-4d30-9317-7fd3c7e62c03.png" width="400" title="A6"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498588-6f5ddd07-7481-46dd-850b-b4eb0f6adf72.png" width="400" title="men4"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159989394-72f1ec83-d435-4145-986e-713f63a211cd.png" width="400" title="A7"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498610-0cb137a2-6a59-45b2-ba9c-1daa0e75704b.png" width="400" title="men5"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159989415-3569791f-b361-4036-929a-3462afb561b9.png" width="400" title="A8"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/147498630-9d209d54-813d-4cf5-aa6e-556a920831ab.png" width="400" title="men6"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159989445-2e93d079-5b39-45e5-b4f3-b94f2613f82c.png" width="400" title="A9"><br>
 <br>
+<img src="https://user-images.githubusercontent.com/95635242/159989471-55c4518c-d8f6-49bf-b102-94aa568fedf1.png" width="400" title="A10"><br>
+<br>
+<img src="https://user-images.githubusercontent.com/95635242/159989527-980174df-821b-4af9-8e82-b7e4b5104f3f.png" width="400" title="A11"><br>
+<br>
+<img src="https://user-images.githubusercontent.com/95635242/159989551-dd3256be-9810-4918-a24c-b64ed36872c0.png" width="400" title="A12"><br>
+<br>
+<img src="https://user-images.githubusercontent.com/95635242/159989565-0fe3272c-53a0-458e-9708-d9bd5cdf1939.png" width="400" title="A13"><br>
+<br>
+<img src="https://user-images.githubusercontent.com/95635242/159989584-eb6892f6-4538-404d-b5bf-4a80a3fd0238.png" width="400" title="A14"><br>
+<br>                                                                                                                                        
 </p>
