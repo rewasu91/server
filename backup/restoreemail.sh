@@ -63,8 +63,7 @@ cp -r wireguard /etc/
 cp chap-secrets /etc/ppp/
 cp passwd1 /etc/ipsec.d/passwd
 cp ss.conf /etc/shadowsocks-libev/akun.conf
-cp -r crot-script /var/lib/
-cp -r premium-script /var/lib/
+cp -r Kaizen /var/lib/
 cp -r sstp /home/sstp
 cp -r v2ray /etc/
 cp -r xray /etc/
