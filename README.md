@@ -69,7 +69,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <br>
 <img src="https://user-images.githubusercontent.com/95635242/159988092-49119c83-522d-4024-a313-f95317f5f96c.png" width="400" title="Menu2"><br>
 <br>
-<img src="https://user-images.githubusercontent.com/95635242/159988106-b1497a5a-dfc0-4479-8be8-24bfa6b00ce3.png width="400" title="Menu3"><br>
+<img src="https://user-images.githubusercontent.com/95635242/159988106-b1497a5a-dfc0-4479-8be8-24bfa6b00ce3.png" width="400" title="Menu3"><br>
 <br>
 <img src="https://user-images.githubusercontent.com/95635242/159989272-f002f3ea-fd35-420a-8fb0-e0172d811eb0.png" width="400" title="A4"><br>
 <br>
