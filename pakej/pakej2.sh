@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@rewasu91 
-rewasu91
-/
-server
-Private
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-server/pakej/pakej1.sh
-@rewasu91
-rewasu91 Update pakej1.sh
-Latest commit 731814d 23 minutes ago
- History
- 1 contributor
-610 lines (579 sloc)  32.6 KB
-   
 #!/bin/bash
 
 clear
