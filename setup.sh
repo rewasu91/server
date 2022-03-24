@@ -1,10 +1,6 @@
 #!/bin/bash
 
 clear
-apt-get install figlet
-apt-get install cowsay fortune-mod -y
-ln -s /usr/games/cowsay /bin
-ln -s /usr/games/fortune /bin
 
 # ==========================================
 #text,A=Merah,B=Hijau,C=Magenta,D=Cyan
@@ -77,10 +73,6 @@ fi
 clear
 echo -e ""
 echo -e ""
-cowsay -f ghostbusters "SELAMAT DATANG BOSKU."
-echo -e ""
-figlet -k '            KAIZEN'
-echo -e ""
 echo -e "     —————————————————————————————————————————————————————————"
 echo -e "     *             Autoskrip VPS Premium KaizenVPN           *"
 echo -e "     —————————————————————————————————————————————————————————"
@@ -101,20 +93,22 @@ echo -e "     *                                                       *"
 echo -e "     * Versi Semua Servis                                    *"
 echo -e "     * [01] Pakej 1 - Semua Servis [A,B,C,D,E,F,G]           *"
 echo -e "     * [02] Pakej 2 - Kecuali Trojan Go [A,B,C,D,E,F]        *"
+echo -e "     * [03] Pakej 3 - Kecuali Trojan Go, L2TP, SSTP, PPTP    *"
+echo -e "     *                [A,B,D,E,F]                            *"
 echo -e "     *                                                       *"
 echo -e "     * Versi Termasuk L2TP, SSTP, PPTP                       *"
-echo -e "     * [03] Pakej 3 - Core V2ray [A,B,C,D,E]                 *"
-echo -e "     * [04] Pakej 4 - Core Xray [A,B,C,D,F]                  *"
-echo -e "     * [05] Pakej 5 - Core V2ray + Trojan Go [A,B,C,D,E,G]   *"
-echo -e "     * [06] Pakej 6 - Core Xray + Trojan Go [A,B,C,D,F,G]    *"
+echo -e "     * [04] Pakej 4 - Core V2ray [A,B,C,D,E]                 *"
+echo -e "     * [05] Pakej 5 - Core Xray [A,B,C,D,F]                  *"
+echo -e "     * [06] Pakej 6 - Core V2ray + Trojan Go [A,B,C,D,E,G]   *"
+echo -e "     * [07] Pakej 7 - Core Xray + Trojan Go [A,B,C,D,F,G]    *"
 echo -e "     *                                                       *"
 echo -e "     * Versi Tidak Termasuk L2TP, SSTP, PPTP                 *"
-echo -e "     * [07] Pakej 7 - Core V2ray [A,B,D,E]                   *"
-echo -e "     * [08] Pakej 8 - Core Xray [A,B,D,F]                    *"
-echo -e "     * [09] Pakej 9 - Core V2ray + Trojan Go [A,B,D,E,G]     *"
-echo -e "     * [10] Pakej 10 - Core Xray + Trojan Go [A,B,D,F,G]     *"
+echo -e "     * [08] Pakej 8 - Core V2ray [A,B,D,E]                   *"
+echo -e "     * [09] Pakej 9 - Core Xray [A,B,D,F]                    *"
+echo -e "     * [10] Pakej 10 - Core V2ray + Trojan Go [A,B,D,E,G]    *"
+echo -e "     * [11] Pakej 11 - Core Xray + Trojan Go [A,B,D,F,G]     *"
 echo -e "     —————————————————————————————————————————————————————————"
-read -p "     ► Sila masukkan nombor pilihan anda [1-10]: " pilihan
+read -p "     ► Sila masukkan nombor pilihan anda [1-11]: " pilihan
 echo -e ""
 
 case $pilihan in
@@ -159,6 +153,10 @@ wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej9.sh && c
 10)
 clear
 wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej10.sh && chmod +x pakej10.sh && ./pakej10.sh
+;;
+11)
+clear
+wget https://raw.githubusercontent.com/rewasu91/server/main/pakej/pakej11.sh && chmod +x pakej11.sh && ./pakej11.sh
 ;;
 *)
 echo " Sila masukkan nombor yang betul!"
