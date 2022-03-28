@@ -49,7 +49,7 @@ echo -e "${D}——————————————————————�
 echo -e ""
 echo -e "${B}[01]${R} ► Menu Style 1 (12 Sub Menu)"
 echo -e "${B}[02]${R} ► Menu Style 2 (26 Sub Menu)"
-echo -e "${B}[03]${R} ► Menu Style 3 (109 Sub Menu)"
+echo -e "${B}[03]${R} ► Menu Style 3 (95 Sub Menu)"
 echo -e "${B}[04]${R} ► Kembali ke Menu Utama"
 echo -e "${B}[05]${R} ► Keluar"
 echo -e ""
