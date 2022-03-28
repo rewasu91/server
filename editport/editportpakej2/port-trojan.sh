@@ -38,7 +38,6 @@ fi
 
 v2raytr=$(cat /etc/trojan/config.json | grep local_port | sed 's/local_//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/"//g' | sed 's/   //g' | sed 's/  //g')
 xraytr=$(cat /etc/xray/xraytrojan.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
-trgo="$(cat /etc/trojan-go/config.json | grep local_port | sed 's/local_port//g' | sed 's/    "": //g' | sed 's/,//g')"
 xraytrgrpc=$(cat /etc/xray/xraytrojangrpc.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
 
 
@@ -55,13 +54,12 @@ echo -e "${D}——————————————————————�
 echo -e ""
 echo -e "${B}[01]${R} ► Tukar port V2ray Trojan $v2raytr"
 echo -e "${B}[02]${R} ► Tukar port Xray Trojan $xraytr"
-echo -e "${B}[03]${R} ► Tukar port Trojan Go $trgo"
-echo -e "${B}[04]${R} ► Tukar port Xray Trojan Grpc $xraytrgrpc"
-echo -e "${B}[05]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[06]${R} ► Keluar"
+echo -e "${B}[03]${R} ► Tukar port Xray Trojan Grpc $xraytrgrpc"
+echo -e "${B}[04]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[05]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-read -p "     ► Sila masukkan nombor pilihan anda [1-6]: " prot
+read -p "     ► Sila masukkan nombor pilihan anda [1-5]: " prot
 echo -e ""
 case $prot in
 1)
@@ -142,43 +140,6 @@ fi
 clear
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-echo -e "${D1}                  Menukar Port Trojan Go                  ${R}"
-echo -e "${D}——————————————————————————————————————————————————————————${R}"
-echo -e ""
-read -p "► Sila masukkan port baru Trojan Go: " trgo2
-if [ -z $trgo2 ]; then
-echo "► Sila masukkan port baru Trojan Go"
-exit 0
-fi
-cek=$(netstat -nutlp | grep -w $trgo2)
-if [[ -z $cek ]]; then
-sed -i "s/$trgo/$trgo2/g" /etc/trojan-go/config.json
-sed -i "s/   ► Trojan Go                   :$trgo/   ► Trojan Go                   :$trgo2/g" /root/log-install.txt
-iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $trgo -j ACCEPT
-iptables -D INPUT -m state --state NEW -m udp -p udp --dport $trgo -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $trgo2 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport $trgo2 -j ACCEPT
-iptables-save > /etc/iptables.up.rules
-iptables-restore -t < /etc/iptables.up.rules
-netfilter-persistent save > /dev/null
-netfilter-persistent reload > /dev/null
-systemctl restart trojan-go.service > /dev/null
-clear
-echo -e ""
-echo -e "${D}——————————————————————————————————————————————————————————${R}"
-echo -e "${D1}             Maklumat Port Baru Trojan Go                 ${R}"
-echo -e "${D}——————————————————————————————————————————————————————————${R}"
-echo -e "► Port baru Trojan Go : $trgo2 !"
-echo -e "${D}——————————————————————————————————————————————————————————${R}"
-echo -e ""
-else
-echo "► Port $trgo2 sudah digunakan. Sila masukkan port lain!"
-fi
-;;
-4)
-clear
-echo -e ""
-echo -e "${D}——————————————————————————————————————————————————————————${R}"
 echo -e "${D1}              Menukar Port Xray Trojan Grpc               ${R}"
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
 echo -e ""
@@ -212,10 +173,10 @@ else
 echo "► Port $xraytrgrpc2 sudah digunakan. Sila masukkan port lain!"
 fi
 ;;
-5)
+4)
 menu
 ;;
-6)
+5)
 cd
 clear
 ;;
