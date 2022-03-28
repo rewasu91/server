@@ -36,6 +36,7 @@ clear
 exit 0
 fi
 
+v2raytr=$(cat /etc/trojan/config.json | grep local_port | sed 's/local_//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/"//g' | sed 's/   //g' | sed 's/  //g')
 xraytr=$(cat /etc/xray/xraytrojan.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
 xraytrgrpc=$(cat /etc/xray/xraytrojangrpc.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
 
@@ -51,16 +52,54 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}                Menu Tukar Port Trojan                    ${R}"
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
 echo -e ""
-echo -e "${B}[01]${R} ► Tukar port Xray Trojan $xraytr"
-echo -e "${B}[02]${R} ► Tukar port Xray Trojan Grpc $xraytrgrpc"
-echo -e "${B}[03]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[04]${R} ► Keluar"
+echo -e "${B}[01]${R} ► Tukar port V2ray Trojan $v2raytr"
+echo -e "${B}[02]${R} ► Tukar port Xray Trojan $xraytr"
+echo -e "${B}[03]${R} ► Tukar port Xray Trojan Grpc $xraytrgrpc"
+echo -e "${B}[04]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[05]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-read -p "     ► Sila masukkan nombor pilihan anda [1-4]: " prot
+read -p "     ► Sila masukkan nombor pilihan anda [1-5]: " prot
 echo -e ""
 case $prot in
 1)
+clear
+echo -e ""
+echo -e "${D}——————————————————————————————————————————————————————————${R}"
+echo -e "${D1}                Menukar Port V2ray Trojan                 ${R}"
+echo -e "${D}——————————————————————————————————————————————————————————${R}"
+echo -e ""
+read -p "► Sila masukkan port baru V2ray Trojan: " v2raytr2
+if [ -z $v2raytr2 ]; then
+echo "► Sila masukkan port baru V2ray Trojan"
+exit 0
+fi
+cek=$(netstat -nutlp | grep -w $v2raytr2)
+if [[ -z $cek ]]; then
+sed -i "s/$v2raytr/$v2raytr2/g" /etc/trojan/config.json
+sed -i "s/   ► V2ray Trojan  		  :$v2raytr/   ► V2ray Trojan  		  :$v2raytr2/g" /root/log-install.txt
+iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $v2raytr -j ACCEPT
+iptables -D INPUT -m state --state NEW -m udp -p udp --dport $v2raytr -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $v2raytr2 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport $v2raytr2 -j ACCEPT
+iptables-save > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
+netfilter-persistent save > /dev/null
+netfilter-persistent reload > /dev/null
+systemctl restart trojan > /dev/null
+clear
+echo -e ""
+echo -e "${D}——————————————————————————————————————————————————————————${R}"
+echo -e "${D1}           Maklumat Port Baru V2ray Trojan                ${R}"
+echo -e "${D}——————————————————————————————————————————————————————————${R}"
+echo -e "► Port baru V2ray Trojan : $v2raytr2 !"
+echo -e "${D}——————————————————————————————————————————————————————————${R}"
+echo -e ""
+else
+echo "► Port $v2raytr2 sudah digunakan. Sila masukkan port lain!"
+fi
+;;
+2)
 clear
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
@@ -97,7 +136,7 @@ else
 echo "► Port $xraytr2 sudah digunakan. Sila masukkan port lain!"
 fi
 ;;
-2)
+3)
 clear
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
@@ -134,16 +173,16 @@ else
 echo "► Port $xraytrgrpc2 sudah digunakan. Sila masukkan port lain!"
 fi
 ;;
-3)
+4)
 menu
 ;;
-4)
+5)
 cd
 clear
 ;;
 *)
 echo " Sila masukkan nombor yang betul!"
 sleep 1
-port-trojan3
+port-trojan
 ;;
 esac
