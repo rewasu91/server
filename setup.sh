@@ -145,9 +145,6 @@ fi
 clear
 echo -e ""
 echo -e ""
-
-echo -e "${D1}                   Senarai Servis & Protokol                    ${R}"
-
 echo -e "${D}—————————————————————————————————————————————————————————${R}"
 echo -e "${D1}             Autoskrip VPS Premium KaizenVPN             ${R}"
 echo -e "${D}—————————————————————————————————————————————————————————${R}"
