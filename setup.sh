@@ -176,7 +176,7 @@ echo -e "${C}Servis Tidak Termasuk L2TP, SSTP, PPTP, & V2ray${R}          "
 echo -e "${B}[6]${R} Pakej 6 ► Core Xray [A,B,D,F] ${B}(Hot Pick)${R}     "
 echo -e "${B}[7]${R} Pakej 7 ► Core Xray + Trojan Go [A,B,D,F,G]          "
 echo -e "${D}—————————————————————————————————————————————————————————${R}"
-read -p "► Sila masukkan nombor pilihan anda [1-7]: " pilihan
+read -p "► Sila masukkan nombor pilihan anda ${B}[1-7]${R}: " pilihan
 echo -e ""
 
 echo -e "${C}Menu SSH & OpenVPN${R}           ${C}Menu Xray Grpc${R}"
