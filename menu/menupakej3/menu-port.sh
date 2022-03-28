@@ -50,19 +50,18 @@ echo -e ""
 echo -e "${B}[01]${R} ► Tukar port OpenVPN"
 echo -e "${B}[02]${R} ► Tukar port Stunnel4"
 echo -e "${B}[03]${R} ► Tukar port Squid"
-echo -e "${B}[04]${R} ► Tukar port SSTP"
-echo -e "${B}[05]${R} ► Tukar port Wireguard"
-echo -e "${B}[06]${R} ► Tukar port V2ray Vless"
-echo -e "${B}[07]${R} ► Tukar port V2ray Vmess"
-echo -e "${B}[08]${R} ► Tukar port Xray Vless"
-echo -e "${B}[09]${R} ► Tukar port Xray Vmess"
-echo -e "${B}[10]${R} ► Tukar port Xray Grpc"
-echo -e "${B}[11]${R} ► Tukar port Trojan"
-echo -e "${B}[12]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[13]${R} ► Keluar"
+echo -e "${B}[04]${R} ► Tukar port Wireguard"
+echo -e "${B}[05]${R} ► Tukar port V2ray Vless"
+echo -e "${B}[06]${R} ► Tukar port V2ray Vmess"
+echo -e "${B}[07]${R} ► Tukar port Xray Vless"
+echo -e "${B}[08]${R} ► Tukar port Xray Vmess"
+echo -e "${B}[09]${R} ► Tukar port Xray Grpc"
+echo -e "${B}[10]${R} ► Tukar port Trojan"
+echo -e "${B}[11]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[12]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-read -p "     ► Sila masukkan nombor pilihan anda [1-13]: " menuport
+read -p "     ► Sila masukkan nombor pilihan anda [1-12]: " menuport
 echo -e ""
 case $menuport in
 1)
@@ -75,33 +74,30 @@ port-stunnel4
 port-squid
 ;;
 4)
-port-sstp
-;;
-5)
 port-wg
 ;;
-6)
+5)
 port-v2rayvless
 ;;
-7)
+6)
 port-v2rayvmess
 ;;
-8)
+7)
 port-xrayvless
 ;;
-9)
+8)
 port-xrayvmess
 ;;
-10)
+9)
 port-xraygrpc
 ;;
-11)
+10)
 port-trojan
 ;;
-12)
+11)
 menu
 ;;
-13)
+12)
 cd
 clear
 ;;
