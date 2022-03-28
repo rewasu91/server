@@ -96,19 +96,19 @@ Download_SSR(){
 }
 Service_SSR(){
 if [[ ${OS} = "centos" ]]; then
-wget --no-check-certificate https://raw.githubusercontent.com/rewasu91/vps/main/mix/ssrmu_centos -O /etc/init.d/ssrmu
+wget --no-check-certificate https://raw.githubusercontent.com/rewasu91/server/main/mix/ssrmu_centos -O /etc/init.d/ssrmu
 chmod +x /etc/init.d/ssrmu
 chkconfig --add ssrmu
 chkconfig ssrmu on
 else
-wget --no-check-certificate https://raw.githubusercontent.com/rewasu91/vps/main/mix/ssrmu_debian -O /etc/init.d/ssrmu
+wget --no-check-certificate https://raw.githubusercontent.com/rewasu91/server/main/mix/ssrmu_debian -O /etc/init.d/ssrmu
 chmod +x /etc/init.d/ssrmu
 update-rc.d -f ssrmu defaults
 fi
 }
 JQ_install(){
 cd "${ssr_folder}"
-wget --no-check-certificate "https://raw.githubusercontent.com/rewasu91/vps/main/mix/jq-linux64" -O ${jq_file}
+wget --no-check-certificate "https://raw.githubusercontent.com/rewasu91/server/main/mix/jq-linux64" -O ${jq_file}
 chmod +x ${jq_file}
 }
 Installation_dependency(){
@@ -122,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/rewasu91/vps/main/install/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/rewasu91/server/main/install/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -138,6 +138,6 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://raw.githubusercontent.com/rewasu91/vps/main/install/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/rewasu91/server/main/install/ssrmu.sh && chmod +x /usr/bin/ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
