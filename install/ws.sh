@@ -5,7 +5,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Getting Proxy Template
-wget -q -O /usr/local/bin/websocket https://raw.githubusercontent.com/rewasu91/vps/main/websocket/websocket.py
+wget -q -O /usr/local/bin/websocket https://raw.githubusercontent.com/rewasu91/server/main/websocket/websocket.py
 chmod +x /usr/local/bin/websocket
 
 # Installing Service
@@ -29,7 +29,7 @@ WantedBy=multi-user.target
 END
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/rewasu91/vps/main/websocket/ws-ovpn.py
+wget -q -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/rewasu91/server/main/websocket/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
@@ -53,7 +53,7 @@ WantedBy=multi-user.target
 END
 
 # Installing Service ws-stunnel
-wget -q -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/rewasu91/vps/main/websocket/ws-stunnel
+wget -q -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/rewasu91/server/main/websocket/ws-stunnel
 chmod +x /usr/local/bin/ws-stunnel
 
 # Create system Service ws-stunnel
