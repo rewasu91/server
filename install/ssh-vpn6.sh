@@ -549,7 +549,7 @@ wget -O port-wg "https://raw.githubusercontent.com/rewasu91/server/main/editport
 wget -O port-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvless.sh"
 wget -O port-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvmess.sh"
 wget -O port-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xraygrpc.sh"
-wget -O port-trojan2 "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan2.sh"
+wget -O port-trojan "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan6.sh"
 
 #izin-port
 chmod +x port-ovpn
@@ -559,7 +559,7 @@ chmod +x port-wg
 chmod +x port-xrayvless
 chmod +x port-xrayvmess
 chmod +x port-xraygrpc
-chmod +x port-trojan2
+chmod +x port-trojan
 
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp && del-expiresshvpn" >> /etc/crontab
