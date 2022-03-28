@@ -40,7 +40,6 @@ v2raytr=$(cat /etc/trojan/config.json | grep local_port | sed 's/local_//g' | se
 xraytr=$(cat /etc/xray/xraytrojan.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
 xraytrgrpc=$(cat /etc/xray/xraytrojangrpc.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
 
-
 clear
 echo -e ""
 echo -e ""
