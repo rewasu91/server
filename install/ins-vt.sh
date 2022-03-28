@@ -25,7 +25,7 @@ date
 root
 
 # install v2ray
-wget https://raw.githubusercontent.com/rewasu91/vps/main/install/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/rewasu91/server/main/install/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 mkdir -p /etc/trojan
 bash -c "$(wget -q -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
