@@ -404,9 +404,6 @@ wget -O add-cff "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-c
 wget -O add-cfh "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-cfh.sh"
 wget -O add-dom "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-dom.sh"
 wget -O add-host "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-host.sh"
-wget -O add-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/add/add-v2rayvless.sh"
-wget -O add-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/add/add-v2rayvmess.sh"
-wget -O add-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/add/add-v2raytrojan.sh"
 wget -O add-xrayxtls "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xrayxtls.sh"
 wget -O add-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xrayvless.sh"
 wget -O add-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xraygrpc.sh"
@@ -418,7 +415,6 @@ wget -O add-pptp "https://raw.githubusercontent.com/rewasu91/server/main/add/add
 wget -O add-ss "https://raw.githubusercontent.com/rewasu91/server/main/add/add-ss.sh"
 wget -O add-ssr "https://raw.githubusercontent.com/rewasu91/server/main/add/add-ssr.sh"
 wget -O add-sstp "https://raw.githubusercontent.com/rewasu91/server/main/add/add-sstp.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/rewasu91/server/main/add/add-trgo.sh"
 wget -O add-wg "https://raw.githubusercontent.com/rewasu91/server/main/add/add-wg.sh"
 
 #izin-add
@@ -428,9 +424,6 @@ chmod +x add-cff
 chmod +x add-cfh
 chmod +x add-dom
 chmod +x add-host
-chmod +x add-v2rayvless
-chmod +x add-v2rayvmess
-chmod +x add-v2raytrojan
 chmod +x add-xrayxtls
 chmod +x add-xrayvless
 chmod +x add-xrayvmess
@@ -442,7 +435,6 @@ chmod +x add-pptp
 chmod +x add-ss
 chmod +x add-ssr
 chmod +x add-sstp
-chmod +x add-trgo
 chmod +x add-wg
 
 #delete
@@ -453,11 +445,7 @@ wget -O del-ss "https://raw.githubusercontent.com/rewasu91/server/main/delete/de
 wget -O del-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-sshvpn.sh"
 wget -O del-ssr "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-ssr.sh"
 wget -O del-sstp "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-sstp.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-trgo.sh"
 wget -O del-wg "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-wg.sh"
-wget -O del-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2raytrojan.sh"
-wget -O del-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2rayvless.sh"
-wget -O del-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2rayvmess.sh"
 wget -O del-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xraygrpc.sh"
 wget -O del-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xraytrojan.sh"
 wget -O del-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xraytrojangrpc.sh"
@@ -474,11 +462,7 @@ chmod +x del-ss
 chmod +x del-sshvpn
 chmod +x del-ssr
 chmod +x del-sstp
-chmod +x del-trgo
 chmod +x del-wg
-chmod +x del-v2raytrojan
-chmod +x del-v2rayvless
-chmod +x del-v2rayvmess
 chmod +x del-xraygrpc
 chmod +x del-xraytrojan
 chmod +x del-xraytrojangrpc
@@ -494,11 +478,7 @@ wget -O renew-ss "https://raw.githubusercontent.com/rewasu91/server/main/renew/r
 wget -O renew-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-sshvpn.sh"
 wget -O renew-ssr "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-ssr.sh"
 wget -O renew-sstp "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-sstp.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-trgo.sh"
 wget -O renew-wg "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-wg.sh"
-wget -O renew-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2raytrojan.sh"
-wget -O renew-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2rayvless.sh"
-wget -O renew-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2rayvmess.sh"
 wget -O renew-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xraygrpc.sh"
 wget -O renew-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xraytrojan.sh"
 wget -O renew-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xraytrojangrpc.sh"
@@ -513,11 +493,7 @@ chmod +x renew-ss
 chmod +x renew-sshvpn
 chmod +x renew-ssr
 chmod +x renew-sstp
-chmod +x renew-trgo
 chmod +x renew-wg
-chmod +x renew-v2raytrojan
-chmod +x renew-v2rayvless
-chmod +x renew-v2rayvmess
 chmod +x renew-xraygrpc
 chmod +x renew-xraytrojan
 chmod +x renew-xraytrojangrpc
@@ -532,11 +508,7 @@ wget -O cek-login "https://raw.githubusercontent.com/rewasu91/server/main/cek/ce
 wget -O cek-pptp "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-pptp.sh"
 wget -O cek-ss "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-ss.sh"
 wget -O cek-sstp "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-sstp.sh"
-wget -O cek-trgo "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-trgo.sh"
 wget -O cek-wg "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-wg.sh"
-wget -O cek-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2raytrojan.sh"
-wget -O cek-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2rayvless.sh"
-wget -O cek-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2rayvmess.sh"
 wget -O cek-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xraygrpc.sh"
 wget -O cek-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xraytrojan.sh"
 wget -O cek-xraytrojantrpc "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xraytrojantrpc.sh"
@@ -551,11 +523,7 @@ chmod +x cek-login
 chmod +x cek-pptp
 chmod +x cek-ss
 chmod +x cek-sstp
-chmod +x cek-trgo
 chmod +x cek-wg
-chmod +x cek-v2raytrojan
-chmod +x cek-v2rayvless
-chmod +x cek-v2rayvmess
 chmod +x cek-xraygrpc
 chmod +x cek-xraytrojan
 chmod +x cek-xraytrojangrpc
@@ -564,7 +532,7 @@ chmod +x cek-xrayvmess
 chmod +x cek-xrayxtls
 
 #menu
-wget -O menu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menupakej4/menu1.sh"
+wget -O menu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menupakej2/menu1.sh"
 wget -O menu-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-sshvpn.sh"
 wget -O menu-l2tp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-l2tp.sh"
 wget -O menu-sstp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-sstp.sh"
@@ -572,8 +540,7 @@ wget -O menu-pptp "https://raw.githubusercontent.com/rewasu91/server/main/menu/m
 wget -O menu-ssr "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-ssr.sh"
 wget -O menu-ss "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-ss.sh"
 wget -O menu-wg "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-wg.sh"
-wget -O menu-system "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-system.sh"
-wget -O menu-v2ray "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-v2ray.sh"
+wget -O menu-system "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-system.sh""
 wget -O menu-xray "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-xray.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-trojan.sh"
 wget -O menu-changemenu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-changemenu.sh"
@@ -593,7 +560,6 @@ chmod +x menu-ssr
 chmod +x menu-ss
 chmod +x menu-wg
 chmod +x menu-system
-chmod +x menu-v2ray
 chmod +x menu-xray
 chmod +x menu-trojan
 chmod +x menu-changemenu
@@ -609,12 +575,10 @@ wget -O port-stunnel4 "https://raw.githubusercontent.com/rewasu91/server/main/ed
 wget -O port-squid "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-squid.sh"
 wget -O port-sstp "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-sstp.sh"
 wget -O port-wg "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-wg.sh"
-wget -O port-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-v2rayvless.sh"
-wget -O port-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-v2rayvmess.sh"
 wget -O port-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvless.sh"
 wget -O port-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvmess.sh"
 wget -O port-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xraygrpc.sh"
-wget -O port-trojan "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan.sh"
+wget -O port-trojan2 "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan2.sh"
 
 #izin-port
 chmod +x port-ovpn
@@ -622,12 +586,10 @@ chmod +x port-stunnel4
 chmod +x port-squid
 chmod +x port-sstp
 chmod +x port-wg
-chmod +x port-v2rayvless
-chmod +x port-v2rayvmess
 chmod +x port-xrayvless
 chmod +x port-xrayvmess
 chmod +x port-xraygrpc
-chmod +x port-trojan
+chmod +x port-trojan2
 
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp && del-expiresshvpn" >> /etc/crontab
