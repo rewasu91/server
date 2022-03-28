@@ -2,7 +2,7 @@
 
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/rewasu91/vps/main/mix/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/rewasu91/server/main/mix/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -27,13 +27,13 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackupemail "https://raw.githubusercontent.com/rewasu91/vps/main/backup/autobackupemail.sh"
-wget -O autobackupnginx "https://raw.githubusercontent.com/rewasu91/vps/main/backup/autobackupnginx.sh"
-wget -O backupemail "https://raw.githubusercontent.com/rewasu91/vps/main/backup/backupemail.sh"
-wget -O backupnginx "https://raw.githubusercontent.com/rewasu91/vps/main/backup/backupnginx.sh"
-wget -O restoreemail "https://raw.githubusercontent.com/rewasu91/vps/main/backup/restoreemail.sh"
-wget -O restorenginx "https://raw.githubusercontent.com/rewasu91/vps/main/backup/restorepnginx.sh"
-wget -O bckp "https://raw.githubusercontent.com/rewasu91/vps/main/backup/bckp.sh"
+wget -O autobackupemail "https://raw.githubusercontent.com/rewasu91/server/main/backup/autobackupemail.sh"
+wget -O autobackupnginx "https://raw.githubusercontent.com/rewasu91/server/main/backup/autobackupnginx.sh"
+wget -O backupemail "https://raw.githubusercontent.com/rewasu91/server/main/backup/backupemail.sh"
+wget -O backupnginx "https://raw.githubusercontent.com/rewasu91/server/main/backup/backupnginx.sh"
+wget -O restoreemail "https://raw.githubusercontent.com/rewasu91/server/main/backup/restoreemail.sh"
+wget -O restorenginx "https://raw.githubusercontent.com/rewasu91/server/main/backup/restorepnginx.sh"
+wget -O bckp "https://raw.githubusercontent.com/rewasu91/server/main/backup/bckp.sh"
 chmod +x backupemail
 chmod +x backupnginx
 chmod +x autobackupemail
