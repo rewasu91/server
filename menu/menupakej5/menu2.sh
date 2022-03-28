@@ -67,9 +67,9 @@ echo -e "${D}——————————————————————�
 echo -e ""
 echo -e "      ${B}[01]${R} ► Menu SSH & OVPN     ${B}[06]${R} ► Menu SHADOWSOCKS      "
 echo -e "      ${B}[02]${R} ► Menu L2TP           ${B}[07]${R} ► Menu WIREGUARD        "
-echo -e "      ${B}[03]${R} ► Menu SSTP           ${B}[08]${R} ► Menu V2RAY CORE       "
-echo -e "      ${B}[04]${R} ► Menu PPTP           ${B}[09]${R} ► Menu XRAY CORE        "
-echo -e "      ${B}[05]${R} ► Menu SSR            ${B}[10]${R} ► Menu TROJAN           "
+echo -e "      ${B}[03]${R} ► Menu SSTP           ${B}[08]${R} ► Menu XRAY CORE        "
+echo -e "      ${B}[04]${R} ► Menu PPTP           ${B}[09]${R} ► Menu TROJAN           "
+echo -e "      ${B}[05]${R} ► Menu SSR            ${B}[10]${R} ► Tukar STYLE MENU      "
 echo -e ""
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
 echo -e ""
@@ -87,13 +87,12 @@ echo -e "${B}[21]${R} ► Menunjukkan status sistem"
 echo -e "${B}[22]${R} ► Restart semua servis"
 echo -e "${B}[23]${R} ► Reboot VPS"
 echo -e "${B}[24]${R} ► Menu UPDATE"
-echo -e "${B}[25]${R} ► Tukar STYLE MENU"
-echo -e "${B}[26]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[27]${R} ► Keluar"
+echo -e "${B}[25]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[26]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
 
-read -p "► Sila masukkan nombor pilihan anda [1-27]: " menu
+read -p "► Sila masukkan nombor pilihan anda [1-26]: " menu
 echo -e ""
 case $menu in
 1)
@@ -169,12 +168,9 @@ reboot
 update
 ;;
 25)
-menu-changemenu
-;;
-26)
 menu
 ;;
-27)
+26)
 cd
 clear
 ;;
