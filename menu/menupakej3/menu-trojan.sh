@@ -60,26 +60,19 @@ echo -e "${B}[07]${R} ► Menambah masa aktif akaun Xray Trojan"
 echo -e "${B}[08]${R} ► Cek user login akaun Xray Xray Trojan"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-echo -e "Trojan Go"
-echo -e "${B}[09]${R} ► Membuat akaun Trojan Go"
-echo -e "${B}[10]${R} ► Memadam akaun Trojan Go"
-echo -e "${B}[11]${R} ► Menambah masa aktif akaun Trojan Go"
-echo -e "${B}[12]${R} ► Cek user login akaun Xray Trojan Go"
-echo -e ""
-echo -e "${D}——————————————————————————————————————————————————————————${R}"
 echo -e "Xray Trojan Grpc"
-echo -e "${B}[13]${R} ► Membuat akaun Xray Trojan Grpc"
-echo -e "${B}[14]${R} ► Memadam akaun Xray Trojan Grpc"
-echo -e "${B}[15]${R} ► Menambah masa aktif akaun Xray Trojan Grpc"
-echo -e "${B}[16]${R} ► Cek user login akaun Xray Xray Trojan Grpc"
+echo -e "${B}[09]${R} ► Membuat akaun Xray Trojan Grpc"
+echo -e "${B}[10]${R} ► Memadam akaun Xray Trojan Grpc"
+echo -e "${B}[11]${R} ► Menambah masa aktif akaun Xray Trojan Grpc"
+echo -e "${B}[12]${R} ► Cek user login akaun Xray Xray Trojan Grpc"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
 echo -e "Lain-lain"
-echo -e "${B}[17]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[18]${R} ► Keluar"
+echo -e "${B}[13]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[14]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-read -p "     ► Sila masukkan nombor pilihan anda [1-18]: " menutrojan
+read -p "     ► Sila masukkan nombor pilihan anda [1-14]: " menutrojan
 echo -e ""
 
 case $menutrojan in
@@ -108,33 +101,21 @@ renew-xraytrojan
 cek-xraytrojan
 ;;
 9)
-add-trgo
-;;
-10)
-del-trgo
-;;
-11)
-renew-trgo
-;;
-12)
-cek-trgo
-;;
-13)
 add-xraytrojangrpc
 ;;
-14)
+10)
 del-xraytrojangrpc
 ;;
-15)
+11)
 renew-xraytrojangrpc
 ;;
-16)
+12)
 cek-xraytrojangrpc
 ;;
-17)
+13)
 menu
 ;;
-18)
+14)
 cd
 clear
 ;;
