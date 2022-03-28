@@ -35,7 +35,7 @@ commonname=kaizenvpn.xyz
 email=kaizen@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/rewasu91/vps/main/mix/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/rewasu91/server/main/mix/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -136,8 +136,8 @@ echo "neofetch" >> .profile
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl https://raw.githubusercontent.com/rewasu91/vps/main/mix/nginx.conf > /etc/nginx/nginx.conf
-curl https://raw.githubusercontent.com/rewasu91/vps/main/mix/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://raw.githubusercontent.com/rewasu91/server/main/mix/nginx.conf > /etc/nginx/nginx.conf
+curl https://raw.githubusercontent.com/rewasu91/server/main/mix/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -145,13 +145,13 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/rewasu91/vps/main/mix/index.html"
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/rewasu91/server/main/mix/index.html"
 /etc/init.d/nginx restart
 cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/rewasu91/vps/main/mix/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/rewasu91/server/main/mix/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -218,7 +218,7 @@ fi
 }
 Check_python
 
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/rewasu91/vps/main/mix/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/rewasu91/server/main/mix/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -305,7 +305,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/rewasu91/vps/main/install/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/rewasu91/server/main/install/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -343,7 +343,7 @@ Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Ganti Banner
-wget -O /etc/issue.net "https://raw.githubusercontent.com/rewasu91/vps/main/install/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/rewasu91/server/main/install/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -366,20 +366,20 @@ netfilter-persistent reload
 cd /usr/bin
 
 #mix
-wget -O info-system "https://raw.githubusercontent.com/rewasu91/vps/main/info/info-system.sh"
-wget -O info-script "https://raw.githubusercontent.com/rewasu91/vps/main/info/info-script.sh"
-wget -O speedtest "https://raw.githubusercontent.com/rewasu91/vps/main/mix/speedtest_cli.py"
-wget -O ram "https://raw.githubusercontent.com/rewasu91/vps/main/mix/ram.sh"
-wget -O running "https://raw.githubusercontent.com/rewasu91/vps/main/mix/running.sh"
+wget -O info-system "https://raw.githubusercontent.com/rewasu91/server/main/info/info-system.sh"
+wget -O info-script "https://raw.githubusercontent.com/rewasu91/server/main/info/info-script.sh"
+wget -O speedtest "https://raw.githubusercontent.com/rewasu91/server/main/mix/speedtest_cli.py"
+wget -O ram "https://raw.githubusercontent.com/rewasu91/server/main/mix/ram.sh"
+wget -O running "https://raw.githubusercontent.com/rewasu91/server/main/mix/running.sh"
 wget -O tendang "https://raw.githubusercontent.com/rewasu91/files/main/service/tendang.sh"
 wget -O update "https://raw.githubusercontent.com/rewasu91/public/main/update/update.sh"
-wget -O change-passwd "https://raw.githubusercontent.com/rewasu91/vps/main/mix/change-passwd.sh"
-wget -O autokill "https://raw.githubusercontent.com/rewasu91/vps/main/mix/autokill.sh"
-wget -O restartsshvpn "https://raw.githubusercontent.com/rewasu91/vps/main/mix/restartsshvpn.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/rewasu91/vps/main/mix/limit-speed.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/rewasu91/vps/main/mix/certv2ray.sh"
-wget -O restart "https://raw.githubusercontent.com/rewasu91/vps/main/mix/restart.sh"
-wget -O clearlog "https://raw.githubusercontent.com/rewasu91/vps/main/mix/clearlog.sh"
+wget -O change-passwd "https://raw.githubusercontent.com/rewasu91/server/main/mix/change-passwd.sh"
+wget -O autokill "https://raw.githubusercontent.com/rewasu91/server/main/mix/autokill.sh"
+wget -O restartsshvpn "https://raw.githubusercontent.com/rewasu91/server/main/mix/restartsshvpn.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/rewasu91/server/main/mix/limit-speed.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/rewasu91/server/main/mix/certv2ray.sh"
+wget -O restart "https://raw.githubusercontent.com/rewasu91/server/main/mix/restart.sh"
+wget -O clearlog "https://raw.githubusercontent.com/rewasu91/server/main/mix/clearlog.sh"
 
 #izin-mix
 chmod +x info-system
@@ -398,28 +398,28 @@ chmod +x restart
 chmod +x clearlog
 
 #add
-wget -O add-sshvpn "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-sshvpn.sh"
-wget -O add-trial "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-trial.sh"
-wget -O add-cff "https://raw.githubusercontent.com/rewasu91/vps/main/cf/add-cff.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/rewasu91/vps/main/cf/add-cfh.sh"
-wget -O add-dom "https://raw.githubusercontent.com/rewasu91/vps/main/cf/add-dom.sh"
-wget -O add-host "https://raw.githubusercontent.com/rewasu91/vps/main/cf/add-host.sh"
-wget -O add-v2rayvless "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-v2rayvless.sh"
-wget -O add-v2rayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-v2rayvmess.sh"
-wget -O add-v2raytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-v2raytrojan.sh"
-wget -O add-xrayxtls "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-xrayxtls.sh"
-wget -O add-xrayvless "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-xrayvless.sh"
-wget -O add-xraygrpc "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-xraygrpc.sh"
-wget -O add-xrayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-xrayvmess.sh"
-wget -O add-xraytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-xraytrojan.sh"
-wget -O add-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-xraytrojangrpc.sh"
-wget -O add-l2tp "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-l2tp.sh"
-wget -O add-pptp "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-pptp.sh"
-wget -O add-ss "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-ss.sh"
-wget -O add-ssr "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-ssr.sh"
-wget -O add-sstp "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-sstp.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-trgo.sh"
-wget -O add-wg "https://raw.githubusercontent.com/rewasu91/vps/main/add/add-wg.sh"
+wget -O add-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/add/add-sshvpn.sh"
+wget -O add-trial "https://raw.githubusercontent.com/rewasu91/server/main/add/add-trial.sh"
+wget -O add-cff "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-cff.sh"
+wget -O add-cfh "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-cfh.sh"
+wget -O add-dom "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-dom.sh"
+wget -O add-host "https://raw.githubusercontent.com/rewasu91/server/main/cf/add-host.sh"
+wget -O add-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/add/add-v2rayvless.sh"
+wget -O add-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/add/add-v2rayvmess.sh"
+wget -O add-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/add/add-v2raytrojan.sh"
+wget -O add-xrayxtls "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xrayxtls.sh"
+wget -O add-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xrayvless.sh"
+wget -O add-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xraygrpc.sh"
+wget -O add-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xrayvmess.sh"
+wget -O add-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xraytrojan.sh"
+wget -O add-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/server/main/add/add-xraytrojangrpc.sh"
+wget -O add-l2tp "https://raw.githubusercontent.com/rewasu91/server/main/add/add-l2tp.sh"
+wget -O add-pptp "https://raw.githubusercontent.com/rewasu91/server/main/add/add-pptp.sh"
+wget -O add-ss "https://raw.githubusercontent.com/rewasu91/server/main/add/add-ss.sh"
+wget -O add-ssr "https://raw.githubusercontent.com/rewasu91/server/main/add/add-ssr.sh"
+wget -O add-sstp "https://raw.githubusercontent.com/rewasu91/server/main/add/add-sstp.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/rewasu91/server/main/add/add-trgo.sh"
+wget -O add-wg "https://raw.githubusercontent.com/rewasu91/server/main/add/add-wg.sh"
 
 #izin-add
 chmod +x add-sshvpn
@@ -446,25 +446,25 @@ chmod +x add-trgo
 chmod +x add-wg
 
 #delete
-wget -O del-expiresshvpn "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-expiresshvpn.sh"
-wget -O del-l2tp "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-l2tp.sh"
-wget -O del-pptp "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-pptp.sh"
-wget -O del-ss "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-ss.sh"
-wget -O del-sshvpn "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-sshvpn.sh"
-wget -O del-ssr "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-ssr.sh"
-wget -O del-sstp "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-sstp.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-trgo.sh"
-wget -O del-wg "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-wg.sh"
-wget -O del-v2raytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-v2raytrojan.sh"
-wget -O del-v2rayvless "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-v2rayvless.sh"
-wget -O del-v2rayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-v2rayvmess.sh"
-wget -O del-xraygrpc "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-xraygrpc.sh"
-wget -O del-xraytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-xraytrojan.sh"
-wget -O del-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-xraytrojangrpc.sh"
-wget -O del-xrayvless "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-xrayvless.sh"
-wget -O del-xrayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-xrayvmess.sh"
-wget -O del-xrayxtls "https://raw.githubusercontent.com/rewasu91/vps/main/delete/del-xrayxtls.sh"
-wget -O xp "https://raw.githubusercontent.com/rewasu91/vps/main/delete/xp.sh"
+wget -O del-expiresshvpn "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-expiresshvpn.sh"
+wget -O del-l2tp "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-l2tp.sh"
+wget -O del-pptp "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-pptp.sh"
+wget -O del-ss "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-ss.sh"
+wget -O del-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-sshvpn.sh"
+wget -O del-ssr "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-ssr.sh"
+wget -O del-sstp "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-sstp.sh"
+wget -O del-trgo "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-trgo.sh"
+wget -O del-wg "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-wg.sh"
+wget -O del-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2raytrojan.sh"
+wget -O del-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2rayvless.sh"
+wget -O del-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2rayvmess.sh"
+wget -O del-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xraygrpc.sh"
+wget -O del-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xraytrojan.sh"
+wget -O del-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xraytrojangrpc.sh"
+wget -O del-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xrayvless.sh"
+wget -O del-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xrayvmess.sh"
+wget -O del-xrayxtls "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-xrayxtls.sh"
+wget -O xp "https://raw.githubusercontent.com/rewasu91/server/main/delete/xp.sh"
 
 #izin-delete
 chmod +x del-expiresshvpn
@@ -488,23 +488,23 @@ chmod +x del-xrayxtls
 chmod +x xp
 
 #renew
-wget -O renew-l2tp "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-l2tp.sh"
-wget -O renew-pptp "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-pptp.sh"
-wget -O renew-ss "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-ss.sh"
-wget -O renew-sshvpn "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-sshvpn.sh"
-wget -O renew-ssr "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-ssr.sh"
-wget -O renew-sstp "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-sstp.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-trgo.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-wg.sh"
-wget -O renew-v2raytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-v2raytrojan.sh"
-wget -O renew-v2rayvless "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-v2rayvless.sh"
-wget -O renew-v2rayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-v2rayvmess.sh"
-wget -O renew-xraygrpc "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-xraygrpc.sh"
-wget -O renew-xraytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-xraytrojan.sh"
-wget -O renew-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-xraytrojangrpc.sh"
-wget -O renew-xrayvless "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-xrayvless.sh"
-wget -O renew-xrayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-xrayvmess.sh"
-wget -O renew-xrayxtls "https://raw.githubusercontent.com/rewasu91/vps/main/renew/renew-xrayxtls.sh"
+wget -O renew-l2tp "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-l2tp.sh"
+wget -O renew-pptp "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-pptp.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-ss.sh"
+wget -O renew-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-sshvpn.sh"
+wget -O renew-ssr "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-ssr.sh"
+wget -O renew-sstp "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-sstp.sh"
+wget -O renew-trgo "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-trgo.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-wg.sh"
+wget -O renew-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2raytrojan.sh"
+wget -O renew-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2rayvless.sh"
+wget -O renew-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2rayvmess.sh"
+wget -O renew-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xraygrpc.sh"
+wget -O renew-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xraytrojan.sh"
+wget -O renew-xraytrojangrpc "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xraytrojangrpc.sh"
+wget -O renew-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xrayvless.sh"
+wget -O renew-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xrayvmess.sh"
+wget -O renew-xrayxtls "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-xrayxtls.sh"
 
 #izin-renew
 chmod +x renew-l2tp
@@ -526,23 +526,23 @@ chmod +x renew-xrayvmess
 chmod +x renew-xrayxtls
 
 #cek
-wget -O cek-lim "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-lim.sh"
-wget -O cek-listmember "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-listmember.sh"
-wget -O cek-login "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-login.sh"
-wget -O cek-pptp "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-pptp.sh"
-wget -O cek-ss "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-ss.sh"
-wget -O cek-sstp "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-sstp.sh"
-wget -O cek-trgo "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-trgo.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-wg.sh"
-wget -O cek-v2raytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-v2raytrojan.sh"
-wget -O cek-v2rayvless "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-v2rayvless.sh"
-wget -O cek-v2rayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-v2rayvmess.sh"
-wget -O cek-xraygrpc "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-xraygrpc.sh"
-wget -O cek-xraytrojan "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-xraytrojan.sh"
-wget -O cek-xraytrojantrpc "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-xraytrojantrpc.sh"
-wget -O cek-xrayvless "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-xrayvless.sh"
-wget -O cek-xrayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-xrayvmess.sh"
-wget -O cek-xrayxtls "https://raw.githubusercontent.com/rewasu91/vps/main/cek/cek-xrayxtls.sh"
+wget -O cek-lim "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-lim.sh"
+wget -O cek-listmember "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-listmember.sh"
+wget -O cek-login "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-login.sh"
+wget -O cek-pptp "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-pptp.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-ss.sh"
+wget -O cek-sstp "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-sstp.sh"
+wget -O cek-trgo "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-trgo.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-wg.sh"
+wget -O cek-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2raytrojan.sh"
+wget -O cek-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2rayvless.sh"
+wget -O cek-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2rayvmess.sh"
+wget -O cek-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xraygrpc.sh"
+wget -O cek-xraytrojan "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xraytrojan.sh"
+wget -O cek-xraytrojantrpc "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xraytrojantrpc.sh"
+wget -O cek-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xrayvless.sh"
+wget -O cek-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xrayvmess.sh"
+wget -O cek-xrayxtls "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-xrayxtls.sh"
 
 #izin-cek
 chmod +x cek-lim
@@ -564,24 +564,24 @@ chmod +x cek-xrayvmess
 chmod +x cek-xrayxtls
 
 #menu
-wget -O menu "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu.sh"
-wget -O menu-sshvpn "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-sshvpn.sh"
-wget -O menu-l2tp "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-l2tp.sh"
-wget -O menu-sstp "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-sstp.sh"
-wget -O menu-pptp "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-pptp.sh"
-wget -O menu-ssr "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-ssr.sh"
-wget -O menu-ss "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-ss.sh"
-wget -O menu-wg "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-wg.sh"
-wget -O menu-system "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-system.sh"
-wget -O menu-v2ray "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-v2ray.sh"
-wget -O menu-xray "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-xray.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-trojan.sh"
-wget -O menu-changemenu "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-changemenu.sh"
-wget -O menu-port "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-port.sh"
-wget -O menu-domain "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-domain.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-webmin.sh"
-wget -O menu-autoreboot "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-autoreboot.sh"
-wget -O menu-backuprestore "https://raw.githubusercontent.com/rewasu91/vps/main/menu/menu-backuprestore.sh"
+wget -O menu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu.sh"
+wget -O menu-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-sshvpn.sh"
+wget -O menu-l2tp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-l2tp.sh"
+wget -O menu-sstp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-sstp.sh"
+wget -O menu-pptp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-pptp.sh"
+wget -O menu-ssr "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-ssr.sh"
+wget -O menu-ss "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-ss.sh"
+wget -O menu-wg "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-wg.sh"
+wget -O menu-system "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-system.sh"
+wget -O menu-v2ray "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-v2ray.sh"
+wget -O menu-xray "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-xray.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-trojan.sh"
+wget -O menu-changemenu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-changemenu.sh"
+wget -O menu-port "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-port.sh"
+wget -O menu-domain "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-domain.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-webmin.sh"
+wget -O menu-autoreboot "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-autoreboot.sh"
+wget -O menu-backuprestore "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-backuprestore.sh"
 
 #izin-menu
 chmod +x menu
@@ -604,17 +604,17 @@ chmod +x menu-autoreboot
 chmod +x menu-backuprestore
 
 #port
-wget -O port-ovpn "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-ovpn.sh"
-wget -O port-stunnel4 "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-stunnel4.sh"
-wget -O port-squid "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-squid.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-sstp.sh"
-wget -O port-wg "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-wg.sh"
-wget -O port-v2rayvless "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-v2rayvless.sh"
-wget -O port-v2rayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-v2rayvmess.sh"
-wget -O port-xrayvless "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-xrayvless.sh"
-wget -O port-xrayvmess "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-xrayvmess.sh"
-wget -O port-xraygrpc "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-xraygrpc.sh"
-wget -O port-trojan "https://raw.githubusercontent.com/rewasu91/vps/main/editport/port-trojan.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-ovpn.sh"
+wget -O port-stunnel4 "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-stunnel4.sh"
+wget -O port-squid "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-squid.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-sstp.sh"
+wget -O port-wg "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-wg.sh"
+wget -O port-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-v2rayvless.sh"
+wget -O port-v2rayvmess "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-v2rayvmess.sh"
+wget -O port-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvless.sh"
+wget -O port-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvmess.sh"
+wget -O port-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xraygrpc.sh"
+wget -O port-trojan "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan.sh"
 
 #izin-port
 chmod +x port-ovpn
