@@ -14,9 +14,9 @@ domain=$(cat /etc/xray/domain)
 mkdir -p /usr/local/xray/
 
 # // Installation XRay Core
-wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/rewasu91/vps/main/install/xray" 
-wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/rewasu91/vps/main/mix/geosite.dat"
-wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/rewasu91/vps/main/mix/geoip.dat"
+wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/rewasu91/server/main/install/xray" 
+wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/rewasu91/server/main/mix/geosite.dat"
+wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/rewasu91/server/main/mix/geoip.dat"
 chmod +x /usr/local/xray/xray
 
 # // Make XRay Mini Root Folder
@@ -204,7 +204,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 EOF
 
-wget https://raw.githubusercontent.com/rewasu91/vps/main/mix/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
+wget https://raw.githubusercontent.com/rewasu91/server/main/mix/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
 rm -f /root/plugin-xray.sh
 service squid start
 uuid=$(cat /proc/sys/kernel/random/uuid)
