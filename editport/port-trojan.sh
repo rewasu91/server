@@ -13,6 +13,29 @@ D1='\033[1;46m'
 #reset
 R='\033[0m'
 
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://raw.githubusercontent.com/rewasu91/public/main/ipaddress.sh | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e "${D1}         Proses Semakan IP Address        ${R}"
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e ""
+clear
+else
+clear
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e "${D1}         Proses Semakan IP Address        ${R}"
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e ""
+sleep 2
+echo -e "${A} Maaf. IP address anda tidak berdaftar dengan admin! ${R}"
+echo -e "${A} Sila hubungi admin di telegram KaizenVPN..${R}"
+sleep 3
+clear
+exit 0
+fi
+
 v2raytr=$(cat /etc/trojan/config.json | grep local_port | sed 's/local_//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/"//g' | sed 's/   //g' | sed 's/  //g')
 xraytr=$(cat /etc/xray/xraytrojan.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/ //g')
 trgo="$(cat /etc/trojan-go/config.json | grep local_port | sed 's/local_port//g' | sed 's/    "": //g' | sed 's/,//g')"
