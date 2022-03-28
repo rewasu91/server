@@ -65,58 +65,44 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}                   Senarai Servis & Protokol                    ${R}"
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
 echo -e ""
-echo -e "      ${B}[01]${R} ► Menu SSH & OVPN     ${B}[08]${R} ► Menu SISTEM           "
-echo -e "      ${B}[02]${R} ► Menu L2TP           ${B}[09]${R} ► Menu V2RAY CORE       "
-echo -e "      ${B}[03]${R} ► Menu SSTP           ${B}[10]${R} ► Menu XRAY CORE        "
-echo -e "      ${B}[04]${R} ► Menu PPTP           ${B}[11]${R} ► Menu TROJAN           "
-echo -e "      ${B}[05]${R} ► Menu SSR            ${B}[12]${R} ► Menu UPDATE           "
-echo -e "      ${B}[06]${R} ► Menu SHADOWSOCKS    ${B}[13]${R} ► Tukar STYLE MENU      "
-echo -e "      ${B}[07]${R} ► Menu WIREGUARD      ${B}[14]${R} ► Keluar                "
+echo -e "      ${B}[01]${R} ► Menu SSH & OVPN     ${B}[06]${R} ► Menu V2RAY CORE       "
+echo -e "      ${B}[02]${R} ► Menu SSR            ${B}[07]${R} ► Menu XRAY CORE        "
+echo -e "      ${B}[03]${R} ► Menu SHADOWSOCKS    ${B}[08]${R} ► Menu TROJAN           "
+echo -e "      ${B}[04]${R} ► Menu WIREGUARD      ${B}[09]${R} ► Tukar STYLE MENU      "
+echo -e "      ${B}[05]${R} ► Menu Menu SISTEM    ${B}[10]${R} ► Keluar                "
 echo -e ""
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
-read -p "► Sila masukkan nombor pilihan anda [1-14]: " menu
+read -p "► Sila masukkan nombor pilihan anda [1-10]: " menu
 echo -e ""
 case $menu in
 1)
 menu-sshvpn
 ;;
 2)
-menu-l2tp
-;;
-3)
-menu-sstp
-;;
-4)
-menu-pptp
-;;
-5)
 menu-ssr
 ;;
-6)
+3)
 menu-ss
 ;;
-7)
+4)
 menu-wg
 ;;
-8)
+5)
 menu-system
 ;;
-9)
+6)
 menu-v2ray
 ;;
-10)
+7)
 menu-xray
 ;;
-11)
+8)
 menu-trojan
 ;;
-12)
-update
-;;
-13)
+9)
 menu-changemenu
 ;;
-14)
+10)
 cd
 clear
 ;;
