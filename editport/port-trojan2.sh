@@ -183,6 +183,6 @@ clear
 *)
 echo " Sila masukkan nombor yang betul!"
 sleep 1
-port-trojan2
+port-trojan
 ;;
 esac
