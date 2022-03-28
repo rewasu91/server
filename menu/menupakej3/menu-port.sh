@@ -67,7 +67,7 @@ case $menuport in
 1)
 port-ovpn
 ;;
-1)
+2)
 port-stunnel4
 ;;
 3)
