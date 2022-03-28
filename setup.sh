@@ -76,11 +76,9 @@ exit 0
 fi
 
 echo -e ""
-echo -e ""
 cowsay -f ghostbusters "SELAMAT DATANG BOSKU."
 echo -e ""
 figlet -k '         KAIZEN'
-echo -e ""
 echo -e "${D}—————————————————————————————————————————————————————————${R}"
 echo -e "${D1}             Autoskrip VPS Premium KaizenVPN             ${R}"
 echo -e "${D}—————————————————————————————————————————————————————————${R}"
