@@ -1,11 +1,6 @@
 #!/bin/bash
 
 clear
-apt-get install figlet
-apt-get install cowsay fortune-mod -y
-ln -s /usr/games/cowsay /bin
-ln -s /usr/games/fortune /bin
-clear
 echo -e ""
 echo -e ""
 cowsay -f ghostbusters "SELAMAT DATANG BOSKU."
