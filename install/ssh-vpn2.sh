@@ -418,7 +418,6 @@ wget -O add-pptp "https://raw.githubusercontent.com/rewasu91/server/main/add/add
 wget -O add-ss "https://raw.githubusercontent.com/rewasu91/server/main/add/add-ss.sh"
 wget -O add-ssr "https://raw.githubusercontent.com/rewasu91/server/main/add/add-ssr.sh"
 wget -O add-sstp "https://raw.githubusercontent.com/rewasu91/server/main/add/add-sstp.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/rewasu91/server/main/add/add-trgo.sh"
 wget -O add-wg "https://raw.githubusercontent.com/rewasu91/server/main/add/add-wg.sh"
 
 #izin-add
@@ -442,7 +441,6 @@ chmod +x add-pptp
 chmod +x add-ss
 chmod +x add-ssr
 chmod +x add-sstp
-chmod +x add-trgo
 chmod +x add-wg
 
 #delete
@@ -453,7 +451,6 @@ wget -O del-ss "https://raw.githubusercontent.com/rewasu91/server/main/delete/de
 wget -O del-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-sshvpn.sh"
 wget -O del-ssr "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-ssr.sh"
 wget -O del-sstp "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-sstp.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-trgo.sh"
 wget -O del-wg "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-wg.sh"
 wget -O del-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2raytrojan.sh"
 wget -O del-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/delete/del-v2rayvless.sh"
@@ -474,7 +471,6 @@ chmod +x del-ss
 chmod +x del-sshvpn
 chmod +x del-ssr
 chmod +x del-sstp
-chmod +x del-trgo
 chmod +x del-wg
 chmod +x del-v2raytrojan
 chmod +x del-v2rayvless
@@ -494,7 +490,6 @@ wget -O renew-ss "https://raw.githubusercontent.com/rewasu91/server/main/renew/r
 wget -O renew-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-sshvpn.sh"
 wget -O renew-ssr "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-ssr.sh"
 wget -O renew-sstp "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-sstp.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-trgo.sh"
 wget -O renew-wg "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-wg.sh"
 wget -O renew-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2raytrojan.sh"
 wget -O renew-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/renew/renew-v2rayvless.sh"
@@ -513,7 +508,6 @@ chmod +x renew-ss
 chmod +x renew-sshvpn
 chmod +x renew-ssr
 chmod +x renew-sstp
-chmod +x renew-trgo
 chmod +x renew-wg
 chmod +x renew-v2raytrojan
 chmod +x renew-v2rayvless
@@ -532,7 +526,6 @@ wget -O cek-login "https://raw.githubusercontent.com/rewasu91/server/main/cek/ce
 wget -O cek-pptp "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-pptp.sh"
 wget -O cek-ss "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-ss.sh"
 wget -O cek-sstp "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-sstp.sh"
-wget -O cek-trgo "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-trgo.sh"
 wget -O cek-wg "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-wg.sh"
 wget -O cek-v2raytrojan "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2raytrojan.sh"
 wget -O cek-v2rayvless "https://raw.githubusercontent.com/rewasu91/server/main/cek/cek-v2rayvless.sh"
@@ -551,7 +544,6 @@ chmod +x cek-login
 chmod +x cek-pptp
 chmod +x cek-ss
 chmod +x cek-sstp
-chmod +x cek-trgo
 chmod +x cek-wg
 chmod +x cek-v2raytrojan
 chmod +x cek-v2rayvless
