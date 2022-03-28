@@ -65,74 +65,63 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}                   Senarai Servis & Protokol                    ${R}"
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
 echo -e ""
-echo -e "${C}Menu SSH & OpenVPN${R}           ${C}Menu Xray Grpc${R}"
-echo -e "${B}[001]${R} ► Buat akaun           ${B}[047]${R} ► Membuat akaun"
-echo -e "${B}[002]${R} ► Buat akaun trial     ${B}[048]${R} ► Padam akaun"
-echo -e "${B}[003]${R} ► Ganti password       ${B}[049]${R} ► Tambah masa aktif"
-echo -e "${B}[004]${R} ► Senarai akaun        ${B}[050]${R} ► Cek user login"
+echo -e "${C}Menu SSH & OpenVPN${R}           ${C}Menu Trojan Xray${R}"
+echo -e "${B}[001]${R} ► Buat akaun           ${B}[040]${R} ► Membuat akaun"
+echo -e "${B}[002]${R} ► Buat akaun trial     ${B}[041]${R} ► Padam akaun"
+echo -e "${B}[003]${R} ► Ganti password       ${B}[042]${R} ► Tambah masa aktif"
+echo -e "${B}[004]${R} ► Senarai akaun        ${B}[053]${R} ► Cek user login"
 echo -e "${B}[005]${R} ► Senarai login"
-echo -e "${B}[006]${R} ► Tambah masa aktif    ${C}Menu Trojan Xray${R}"
-echo -e "${B}[007]${R} ► Padam akaun          ${B}[051]${R} ► Membuat akaun"
-echo -e "${B}[008]${R} ► Padam akaun expire   ${B}[052]${R} ► Padam akaun"
-echo -e "${B}[009]${R} ► Setup Autokill SSH   ${B}[053]${R} ► Tambah masa aktif"
-echo -e "${B}[010]${R} ► Tunjuk Multi Login   ${B}[054]${R} ► Cek user login"
+echo -e "${B}[006]${R} ► Tambah masa aktif    ${C}Menu Trojan Xray Grpc${R}"
+echo -e "${B}[007]${R} ► Padam akaun          ${B}[044]${R} ► Membuat akaun"
+echo -e "${B}[008]${R} ► Padam akaun expire   ${B}[045${R} ► Padam akaun"
+echo -e "${B}[009]${R} ► Setup Autokill SSH   ${B}[046]${R} ► Tambah masa aktif"
+echo -e "${B}[010]${R} ► Tunjuk Multi Login   ${B}[047]${R} ► Cek user login"
 echo -e "${B}[011]${R} ► Restart servis"
-echo -e "                                     ${C}Menu Trojan Xray Grpc${R}"
-echo -e "${C}Menu L2TP${R}                    ${B}[055]${R} ► Membuat akaun"
-echo -e "${B}[012]${R} ► Membuat akaun        ${B}[056]${R} ► Padam akaun"
-echo -e "${B}[013]${R} ► Padam akaun          ${B}[057]${R} ► Tambah masa aktif"
-echo -e "${B}[014]${R} ► Tambah masa aktif    ${B}[058]${R} ► Cek user login"
 echo -e ""
-echo -e "${C}Menu SSTP${R}"
-echo -e "${B}[015]${R} ► Membuat akaun"
-echo -e "${B}[016]${R} ► Padam akaun"
-echo -e "${B}[017]${R} ► Tambah masa aktif    ${C}Menu Sistem${R}"
-echo -e "${B}[018]${R} ► Cek user login"
-echo -e "                                     ${C}Untuk yang tiada akaun Cloudflare${R}"
-echo -e "${C}Menu PPTP${R}                    ${B}[059]${R} ► Tambah/Tukar domain"
-echo -e "${B}[019]${R} ► Membuat akaun"
-echo -e "${B}[020]${R} ► Padam akaun          ${C}Untuk yang ada akaun Cloudflare${R}"
-echo -e "${B}[021]${R} ► Tambah masa aktif    ${B}[060]${R} ► Tambah ID Cloudflare"
-echo -e "${B}[022]${R} ► Cek user login       ${B}[061]${R} ► Tambah Subdomain Cloudflare"
-echo -e "                                     ${B}[062]${R} ► Pointing bug ke IP lain"
-echo -e "${C}Menu SSR${R}                     ${B}[063]${R} ► Renew certificate"
-echo -e "${B}[023]${R} ► Membuat akaun"
-echo -e "${B}[024]${R} ► Padam akaun          ${C}Menu Tukar Port Servis${R}"
-echo -e "${B}[025]${R} ► Tambah masa aktif    ${B}[064]${R} ► Tukar port OpenVPN"
-echo -e "${B}[026]${R} ► Menu SSR yang lain   ${B}[065]${R} ► Tukar port Stunnel4"
-echo -e "                                     ${B}[066]${R} ► Tukar port Squid"
-echo -e "${C}Menu Shadowsocks${R}             ${B}[067]${R} ► Tukar port SSTP"
-echo -e "${B}[027]${R} ► Membuat akaun        ${B}[068]${R} ► Tukar port Wireguard"
-echo -e "${B}[028]${R} ► Padam akaun          ${B}[069]${R} ► Tukar port Xray Vless"
-echo -e "${B}[029]${R} ► Tambah masa aktif    ${B}[070]${R} ► Tukar port Xray Vmess"
-echo -e "${B}[030]${R} ► Cek user login       ${B}[071]${R} ► Tukar port Xray Grpc"
-echo -e "                                     ${B}[072]${R} ► Tukar port Trojan"
-echo -e "${C}Menu Wireguard${R}"
-echo -e "${B}[031]${R} ► Membuat akaun        ${C}Menu Backup & Restore${R}"
-echo -e "${B}[032]${R} ► Padam akaun          ${B}[073]${R} ► Backup guna Email"
-echo -e "${B}[033]${R} ► Tambah masa aktif    ${B}[074]${R} ► Backup guna Nginx"
-echo -e "${B}[034]${R} ► Cek user login       ${B}[075]${R} ► Autobackup guna Email"
-echo -e "                                     ${B}[076]${R} ► Autobackup guna Nginx"
-echo -e "${C}Menu Xray Vless Xtls${R}         ${B}[077]${R} ► Restore guna Email"
-echo -e "${B}[035]${R} ► Membuat akaun        ${B}[078]${R} ► Restore guna Nginx"
-echo -e "${B}[036]${R} ► Padam akaun"
-echo -e "${B}[037]${R} ► Tambah masa aktif    ${C}Lain-lain${R}"
-echo -e "${B}[038]${R} ► Cek user login       ${B}[079]${R} ► Menu webmin"
-echo -e "                                     ${B}[080]${R} ► Menu set autoreboot"
-echo -e "${C}Menu Xray Vless${R}              ${B}[081]${R} ► Limit Speed"
-echo -e "${B}[039]${R} ► Membuat akaun        ${B}[082]${R} ► Semak penggunaan Ram"
-echo -e "${B}[040]${R} ► Padam akaun          ${B}[083]${R} ► Speedtest VPS"
-echo -e "${B}[041]${R} ► Tambah masa aktif    ${B}[084]${R} ► Info autoskrip"
-echo -e "${B}[042]${R} ► Cek user login       ${B}[085]${R} ► Status sistem"
-echo -e "                                     ${B}[086]${R} ► Update skrip & sistem"
-echo -e "${C}Menu Xray Vmess${R}              ${B}[087]${R} ► Restart semua servis"
-echo -e "${B}[043]${R} ► Membuat akaun        ${B}[088]${R} ► Reboot VPS"
-echo -e "${B}[044]${R} ► Padam akaun          ${B}[089]${R} ► Update skrip & sistem"
-echo -e "${B}[045]${R} ► Tambah masa aktif    ${B}[090]${R} ► Tukar Style Menu"
-echo -e "${B}[046]${R} ► Cek user login       ${B}[091]${R} ► Keluar"
+echo -e "${C}Menu SSR${R}                     ${C}Untuk yang tiada akaun Cloudflare${R}"
+echo -e "${B}[012]${R} ► Membuat akaun        ${B}[048]${R} ► Tambah/Tukar domain"
+echo -e "${B}[013]${R} ► Padam akaun"
+echo -e "${B}[014]${R} ► Tambah masa aktif    ${C}Untuk yang ada akaun Cloudflare${R}"
+echo -e "${B}[015]${R} ► Menu SSR yang lain   ${B}[049]${R} ► Tambah ID Cloudflare"
+echo -e "                                     ${B}[050]${R} ► Tambah Subdomain Cloudflare"
+echo -e "${C}Menu Shadowsocks${R}             ${B}[051]${R} ► Pointing bug ke IP lain"
+echo -e "${B}[016]${R} ► Membuat akaun        ${B}[052]${R} ► Renew certificate"
+echo -e "${B}[017]${R} ► Padam akaun"
+echo -e "${B}[018]${R} ► Tambah masa aktif    ${C}Menu Tukar Port Servis${R}"
+echo -e "${B}[019]${R} ► Cek user login       ${B}[053]${R} ► Tukar port OpenVPN"
+echo -e "                                     ${B}[054]${R} ► Tukar port Stunnel4"
+echo -e "${C}Menu Wireguard${R}               ${B}[055]${R} ► Tukar port Squid"
+echo -e "${B}[020]${R} ► Membuat akaun        ${B}[056]${R} ► Tukar port Wireguard"
+echo -e "${B}[021]${R} ► Padam akaun          ${B}[057]${R} ► Tukar port Xray Vless"
+echo -e "${B}[022]${R} ► Tambah masa aktif    ${B}[058]${R} ► Tukar port Xray Vmess"
+echo -e "${B}[023]${R} ► Cek user login       ${B}[059]${R} ► Tukar port Xray Grpc"
+echo -e "                                     ${B}[060]${R} ► Tukar port Trojan"
+echo -e "${C}Menu Xray Vless Xtls${R}"
+echo -e "${B}[024]${R} ► Membuat akaun        ${C}Menu Backup & Restore${R}"
+echo -e "${B}[025]${R} ► Padam akaun          ${B}[061]${R} ► Backup guna Email"
+echo -e "${B}[026]${R} ► Tambah masa aktif    ${B}[062]${R} ► Backup guna Nginx"
+echo -e "${B}[027]${R} ► Cek user login       ${B}[063]${R} ► Autobackup guna Email"
+echo -e "                                     ${B}[064]${R} ► Autobackup guna Nginx"
+echo -e "${C}Menu Xray Vless${R}              ${B}[065]${R} ► Restore guna Email"
+echo -e "${B}[028]${R} ► Membuat akaun        ${B}[066]${R} ► Restore guna Nginx"
+echo -e "${B}[029]${R} ► Padam akaun"
+echo -e "${B}[030]${R} ► Tambah masa aktif    ${C}Lain-lain${R}"
+echo -e "${B}[031]${R} ► Cek user login       ${B}[067]${R} ► Menu webmin"
+echo -e "                                     ${B}[068]${R} ► Menu set autoreboot"
+echo -e "${C}Menu Xray Vmess${R}              ${B}[069]${R} ► Limit Speed"
+echo -e "${B}[032]${R} ► Membuat akaun        ${B}[070]${R} ► Semak penggunaan Ram"
+echo -e "${B}[033]${R} ► Padam akaun          ${B}[071]${R} ► Speedtest VPS"
+echo -e "${B}[034]${R} ► Tambah masa aktif    ${B}[072]${R} ► Info sistem"
+echo -e "${B}[035]${R} ► Cek user login       ${B}[073]${R} ► Info autoskrip"
+echo -e "                                     ${B}[074]${R} ► Status sistem"
+echo -e "${C}Menu Xray Grpc${R}               ${B}[075]${R} ► Restart semua servis"
+echo -e "${B}[036]${R} ► Membuat akaun        ${B}[076]${R} ► Reboot VPS"
+echo -e "${B}[037]${R} ► Padam akaun          ${B}[077]${R} ► Update skrip & sistem"
+echo -e "${B}[038]${R} ► Tambah masa aktif    ${B}[078]${R} ► Tukar Style Menu"
+echo -e "${B}[039]${R} ► Cek user login       ${B}[079]${R} ► Keluar"
 echo -e ""
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
-read -p "► Sila masukkan nombor pilihan anda [1-91]: " menu
+read -p "► Sila masukkan nombor pilihan anda [1-79]: " menu
 echo -e ""
 case $menu in
 1)
@@ -169,243 +158,207 @@ cek-lim
 restart 
 ;;
 12)
-add-l2tp
-;;
-13)
-del-l2tp
-;;
-14)
-renew-l2tp
-;;
-15)
-add-sstp
-;;
-16)
-del-sstp
-;;
-17)
-renew-sstp
-;;
-18)
-cek-sstp
-;;
-19)
-add-pptp
-;;
-20)
-del-pptp
-;;
-21)
-renew-pptp
-;;
-22)
-cek-pptp
-;;
-23)
 add-ssr
 ;;
-24)
+13)
 del-ssr
 ;;
-25)
+14)
 renew-ssr
 ;;
-26)
+15)
 ssr
 ;;
-27)
+16)
 add-ss
 ;;
-28)
+17)
 del-ss
 ;;
-29)
+18)
 renew-ss
 ;;
-30)
+19)
 cek-ss
 ;;
-31)
+20)
 add-wg
 ;;
-32)
+21)
 del-wg
 ;;
-33)
+22)
 renew-wg
 ;;
-34)
+23)
 cek-wg
 ;;
-35)
+24)
 add-xrayxtls
 ;;
-36)
+25)
 del-xrayxtls
 ;;
-37)
+26)
 renew-xrayxtls
 ;;
-38)
+27)
 cek-xrayxtls
 ;;
-39)
+28)
 add-xrayvless
 ;;
-40)
+29)
 del-xrayvless
 ;;
-41)
+30)
 renew-xrayvless
 ;;
-42)
+31)
 cek-xrayvless
 ;;
-43)
+32)
 add-xrayvmess
 ;;
-44)
+33)
 del-vxrayvmess
 ;;
-45)
+34)
 renew-xrayvmess
 ;;
-46)
+35)
 cek-xrayvmess
 ;;
-47)
+36)
 add-xraygrpc
 ;;
-48)
+37)
 del-xraygrpc
 ;;
-49)
+38)
 renew-xraygrpc
 ;;
-50)
+39)
 cek-xraygrpc
 ;;
-51)
+40)
 add-xraytrojan
 ;;
-52)
+41)
 del-xraytrojan
 ;;
-53)
+42)
 renew-xraytrojan
 ;;
-54)
+43)
 cek-xraytrojan
 ;;
-55)
+44)
 add-xraytrojangrpc
 ;;
-56)
+45)
 del-xraytrojangrpc
 ;;
-57)
+46)
 renew-xraytrojangrpc
 ;;
-58)
+47)
 cek-xraytrojangrpc
 ;;
-59)
+48)
 add-host
 ;;
-60)
+49)
 add-cff
 ;;
-61)
+50)
 add-dom
 ;;
-62)
+51)
 add-cfh
 ;;
-63)
+52)
 certv2ray
 ;;
-64)
+53)
 port-ovpn
 ;;
-65)
+54)
 port-stunnel4
 ;;
-66)
+55)
 port-squid
 ;;
-67)
-port-sstp
-;;
-68)
+56)
 port-wg
 ;;
-69)
+57)
 port-xrayvless
 ;;
-70)
+58)
 port-xrayvmess
 ;;
-71)
+59)
 port-xraygrpc
 ;;
-72)
+60)
 port-trojan
 ;;
-73)
+61)
 backupemail
 ;;
-74)
+62)
 backupnginx
 ;;
-75)
+63)
 autobackupemail
 ;;
-76)
+64)
 autobackupnginx
 ;;
-77)
+65)
 restoreemail
 ;;
-78)
+66)
 restorenginx
 ;;
-79)
+67)
 menu-webmin
 ;;
-80)
+68)
 menu-autoreboot
 ;;
-81)
+69)
 limit-speed
 ;;
-82)
+70)
 ram
 ;;
-83)
+71)
 speedtest
 ;;
-84)
+72)
 info-system
 ;;
-85)
+73)
 info-script
 ;;
-86)
+74)
 running
 ;;
-87)
+75)
 restart
 ;;
-88)
+76)
 reboot
 ;;
-89)
+77)
 update
 ;;
-90)
+78)
 menu-changemenu
 ;;
-91)
+79)
 cd
 clear
 ;;
