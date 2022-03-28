@@ -52,7 +52,7 @@ echo -e "${B}[02]${R} ► Memadam akaun V2ray Trojan"
 echo -e "${B}[03]${R} ► Menambah masa aktif akaun V2ray Trojan"
 echo -e "${B}[04]${R} ► Cek user login akaun Xray V2ray Trojan"
 echo -e ""
-echo -e "${D}——————————————————————————————————————————————————————————${R}"c
+echo -e "${D}——————————————————————————————————————————————————————————${R}"
 echo -e "Xray Trojan"
 echo -e "${B}[05]${R} ► Membuat akaun Xray Trojan"
 echo -e "${B}[06]${R} ► Memadam akaun Xray Trojan"
