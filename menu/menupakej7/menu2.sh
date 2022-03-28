@@ -65,112 +65,101 @@ echo -e "${D}——————————————————————�
 echo -e "${D1}                   Senarai Servis & Protokol                    ${R}"
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
 echo -e ""
-echo -e "      ${B}[01]${R} ► Menu SSH & OVPN     ${B}[06]${R} ► Menu SHADOWSOCKS      "
-echo -e "      ${B}[02]${R} ► Menu L2TP           ${B}[07]${R} ► Menu WIREGUARD        "
-echo -e "      ${B}[03]${R} ► Menu SSTP           ${B}[08]${R} ► Menu XRAY CORE        "
-echo -e "      ${B}[04]${R} ► Menu PPTP           ${B}[09]${R} ► Menu TROJAN           "
-echo -e "      ${B}[05]${R} ► Menu SSR            ${B}[10]${R} ► Tukar STYLE MENU      "
+echo -e "      ${B}[01]${R} ► Menu SSH & OVPN     ${B}[05]${R} ► Menu XRAY CORE        "
+echo -e "      ${B}[02]${R} ► Menu SSR            ${B}[06]${R} ► Menu TROJAN           "
+echo -e "      ${B}[03]${R} ► Menu SHADOWSOCKS    ${B}[07]${R} ► Menu UPDATE           "
+echo -e "      ${B}[04]${R} ► Menu WIREGUARD      ${B}[08]${R} ► Tukar STYLE MENU      "
 echo -e ""
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
 echo -e ""
-echo -e "${B}[11]${R} ► Menu sistem domain"
-echo -e "${B}[12]${R} ► Menu tukar port servis"
-echo -e "${B}[13]${R} ► Menu backup dan restore"
-echo -e "${B}[14]${R} ► Menu Webmin"
-echo -e "${B}[15]${R} ► Menu set autoreboot"
-echo -e "${B}[16]${R} ► Limitkan kelajuan server"
-echo -e "${B}[17]${R} ► Cek penggunaan ram VPS"
-echo -e "${B}[18]${R} ► Speedtest VPS"
-echo -e "${B}[19]${R} ► Menunjukkan maklumat sistem"
-echo -e "${B}[20]${R} ► Menunjukkan maklumat autoskrip"
-echo -e "${B}[21]${R} ► Menunjukkan status sistem"
-echo -e "${B}[22]${R} ► Restart semua servis"
-echo -e "${B}[23]${R} ► Reboot VPS"
-echo -e "${B}[24]${R} ► Menu UPDATE"
-echo -e "${B}[25]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[26]${R} ► Keluar"
+echo -e "${B}[09]${R} ► Menu sistem domain"
+echo -e "${B}[10]${R} ► Menu tukar port servis"
+echo -e "${B}[11]${R} ► Menu backup dan restore"
+echo -e "${B}[12]${R} ► Menu Webmin"
+echo -e "${B}[13]${R} ► Menu set autoreboot"
+echo -e "${B}[14]${R} ► Limitkan kelajuan server"
+echo -e "${B}[15]${R} ► Cek penggunaan ram VPS"
+echo -e "${B}[16]${R} ► Speedtest VPS"
+echo -e "${B}[17]${R} ► Menunjukkan maklumat sistem"
+echo -e "${B}[18]${R} ► Menunjukkan maklumat autoskrip"
+echo -e "${B}[19]${R} ► Menunjukkan status sistem"
+echo -e "${B}[20]${R} ► Restart semua servis"
+echo -e "${B}[21]${R} ► Reboot VPS"
+echo -e "${B}[22]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[23]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
 
-read -p "► Sila masukkan nombor pilihan anda [1-26]: " menu
+read -p "► Sila masukkan nombor pilihan anda [1-23]: " menu
 echo -e ""
 case $menu in
 1)
 menu-sshvpn
 ;;
 2)
-menu-l2tp
-;;
-3)
-menu-sstp
-;;
-4)
-menu-pptp
-;;
-5)
 menu-ssr
 ;;
-6)
+3)
 menu-ss
 ;;
-7)
+4)
 menu-wg
 ;;
-8)
-menu-v2ray
-;;
-9)
+5)
 menu-xray
 ;;
-10)
+6)
 menu-trojan
 ;;
-11)
-menu-domain
-;;
-12)
-menu-port
-;;
-13)
-menu-backuprestore
-;;
-14)
-menu-webmin
-;;
-15)
-menu-autoreboot
-;;
-16)
-limit-speed
-;;
-17)
-ram
-;;
-18)
-speedtest
-;;
-19)
-info-system
-;;
-20)
-info-script
-;;
-21)
-running
-;;
-22)
-restart
-;;
-23)
-reboot
-;;
-24)
+7)
 update
 ;;
-25)
+8)
+menu-changemenu
+;;
+9)
+menu-domain
+;;
+10)
+menu-port
+;;
+11)
+menu-backuprestore
+;;
+12)
+menu-webmin
+;;
+13)
+menu-autoreboot
+;;
+14)
+limit-speed
+;;
+15)
+ram
+;;
+16)
+speedtest
+;;
+17)
+info-system
+;;
+18)
+info-script
+;;
+19)
+running
+;;
+20)
+restart
+;;
+21)
+reboot
+;;
+22)
 menu
 ;;
-26)
+23)
 cd
 clear
 ;;
