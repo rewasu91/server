@@ -14,6 +14,28 @@ D1='\033[1;46m'
 R='\033[0m'
 
 MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://raw.githubusercontent.com/rewasu91/public/main/ipaddress.sh | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e "${D1}         Proses Semakan IP Address        ${R}"
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e ""
+clear
+else
+clear
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e "${D1}         Proses Semakan IP Address        ${R}"
+echo -e "${D}——————————————————————————————————————————${R}"
+echo -e ""
+sleep 2
+echo -e "${A} Maaf. IP address anda tidak berdaftar dengan admin! ${R}"
+echo -e "${A} Sila hubungi admin di telegram KaizenVPN..${R}"
+sleep 3
+clear
+exit 0
+fi
+
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 
