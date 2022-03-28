@@ -564,7 +564,7 @@ chmod +x cek-xrayvmess
 chmod +x cek-xrayxtls
 
 #menu
-wget -O menu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/rewasu91/server/main/menu/menupakej5/menu1.sh"
 wget -O menu-sshvpn "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-sshvpn.sh"
 wget -O menu-l2tp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-l2tp.sh"
 wget -O menu-sstp "https://raw.githubusercontent.com/rewasu91/server/main/menu/menu-sstp.sh"
