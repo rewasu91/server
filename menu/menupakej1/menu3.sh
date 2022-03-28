@@ -442,7 +442,7 @@ menu-webmin
 menu-autoreboot
 ;;
 99)
-lmit-speed
+limit-speed
 ;;
 100)
 ram
