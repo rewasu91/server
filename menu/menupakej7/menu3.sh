@@ -127,7 +127,7 @@ echo -e "${B}[042]${R} ► Tambah masa aktif    ${B}[082]${R} ► Tukar Style Me
 echo -e "${B}[043]${R} ► Cek user login       ${B}[083]${R} ► Keluar"
 echo -e ""
 echo -e "${D}————————————————————————————————————————————————————————————————${R}"
-read -p "► Sila masukkan nombor pilihan anda [1-3]: " menu
+read -p "► Sila masukkan nombor pilihan anda [1-83]: " menu
 echo -e ""
 case $menu in
 1)
