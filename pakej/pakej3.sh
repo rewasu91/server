@@ -154,7 +154,7 @@ echo -e "${D1}        Memasang Servis SSH & OPENVPN        ${R}"
 echo -e "${D}—————————————————————————————————————————————${R}"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/rewasu91/vps/main/install/ssh-vpn3.sh && chmod +x ssh-vpn3.sh && ./ssh-vpn3.sh
 clear
 echo -e ""
 echo -e "${D}—————————————————————————————————————————————————————${R}"
