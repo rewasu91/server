@@ -585,7 +585,7 @@ wget -O port-wg "https://raw.githubusercontent.com/rewasu91/server/main/editport
 wget -O port-xrayvless "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvless.sh"
 wget -O port-xrayvmess "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xrayvmess.sh"
 wget -O port-xraygrpc "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-xraygrpc.sh"
-wget -O port-trojan "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan.sh"
+wget -O port-trojan "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-trojan5.sh"
 wget -O port-sstp "https://raw.githubusercontent.com/rewasu91/server/main/editport/port-sstp.sh"
 
 #izin-port
