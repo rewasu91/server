@@ -61,7 +61,7 @@ case $changemenustyle in
 clear
 cd /usr/bin
 rm menu
-wget -O menu "https://raw.githubusercontent.com/rewasu91/public/main/menu/menu1.sh"
+wget -O menu "https://raw.githubusercontent.com/rewasu91/public/main/menu/menupakej4/menu1.sh"
 chmod +x menu
 clear
 echo -e ""
@@ -85,7 +85,7 @@ echo -e ""
 clear
 cd /usr/bin
 rm menu
-wget -O menu "https://raw.githubusercontent.com/rewasu91/public/main/menu/menu2.sh"
+wget -O menu "https://raw.githubusercontent.com/rewasu91/public/main/menu/menupakej4/menu2.sh"
 chmod +x menu
 clear
 echo -e ""
@@ -109,7 +109,7 @@ echo -e ""
 clear
 cd /usr/bin
 rm menu
-wget -O menu "https://raw.githubusercontent.com/rewasu91/public/main/menu/menu3.sh"
+wget -O menu "https://raw.githubusercontent.com/rewasu91/public/main/menu/menupakej4/menu3.sh"
 chmod +x menu
 clear
 echo -e ""
