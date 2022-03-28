@@ -60,12 +60,11 @@ echo -e "${B}[10]${R} ► Menunjukkan maklumat autoskrip"
 echo -e "${B}[11]${R} ► Menunjukkan status sistem"
 echo -e "${B}[12]${R} ► Restart semua servis"
 echo -e "${B}[13]${R} ► Reboot VPS"
-echo -e "${B}[14]${R} ► Menu UPDATE"
-echo -e "${B}[15]${R} ► Kembali ke Menu Utama"
-echo -e "${B}[16]${R} ► Keluar"
+echo -e "${B}[14]${R} ► Kembali ke Menu Utama"
+echo -e "${B}[15]${R} ► Keluar"
 echo -e ""
 echo -e "${D}——————————————————————————————————————————————————————————${R}"
-read -p "     ► Sila masukkan nombor pilihan anda [1-16]: " menusystem
+read -p "     ► Sila masukkan nombor pilihan anda [1-15]: " menusystem
 echo -e ""
 case $menusystem in
 1)
@@ -108,12 +107,9 @@ restart
 reboot
 ;;
 14)
-update
-;;
-15)
 menu
 ;;
-16)
+15)
 cd
 clear
 ;;
