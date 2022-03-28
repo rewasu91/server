@@ -80,7 +80,7 @@ cp -r /etc/xray backup/xray
 cp -r /etc/v2ray backup/v2ray
 cp -r /etc/trojan-go backup/trojan-go
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
-cp -r /home/vps/public_html backup/public_html
+cp -r /home/Kaizen/public_html backup/public_html
 cd /root
 zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
