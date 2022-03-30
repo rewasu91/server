@@ -21,6 +21,28 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <br>
 </b>
 
+## ⏩ PAKEJ SERVIS YANG DITAWARKAN ⏪
+<b>
+⚒ Berikut merupakan senarai servis yang ditawarkan:- <br>
+[A] ► Servis SSH, Dropbear, Stunnel4, OpenVPN, Squid <br>
+[B] ► Servis Websocket, OHP <br>
+[C] ► Servis L2TP, SSTP, PPTP <br>
+[D] ► Servis Wireguard, Shadowsocks & SSR <br>
+[E] ► Servis V2ray Vmess/Vless/Trojan (Ws) <br>
+[F] ► Servis Xray Vmess/Vless/Trojan (Ws, Tcp, Kcp, Xtls, Grpc) <br>
+[G] ► Servis Trojan Go <br>
+<br>
+⚒ Terdapat 7 kombinasi pakej servis yang ditawarkan didalam skrip ini. Anda boleh pilih salah satu (1-7):- <br>
+♦️ Pakej 1 ► Semua Servis [A,B,C,D,E,F,G] <br>
+♦️ Pakej 2 ► Semua Servis Kecuali Trojan Go [A,B,C,D,E,F] <br>
+♦️ Pakej 3 ► Semua Servis Kecuali Trojan Go, L2TP, SSTP & PPTP [A,B,D,E,F] (🔥Top Pick) <br>
+♦️ Pakej 4 ► Semua Servis Kecuali Trojan Go & V2ray (Core Xray) [A,B,C,D,F] <br>
+♦️ Pakej 5 ► Semua Servis Kecuali V2ray (Core Xray + Trojan Go) [A,B,C,D,F,G] <br>
+♦️ Pakej 6 ► Semua Servis Kecuali Trojan Go, L2TP, SSTP, PPTP & V2ray (Core Xray) [A,B,D,F] (🔥Top Pick) <br>
+♦️ Pakej 7 ► Semua Servis Kecuali L2TP, SSTP, PPTP & V2ray (Core Xray + Trojan Go) [A,B,D,F,G] <br>
+<br>
+</b>
+
 ## ⏩ SERVIS ⏪
 <b>
 ♦️ SSH, Dropbear, OpenVPN & Squid <br>
@@ -63,6 +85,8 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <br>
 </b>
 <p align="center">
+  <img src="https://user-images.githubusercontent.com/95635242/160888090-0c10a352-ce73-4ca1-9ae0-fbf8f1d0b853.jpg" width="400" title="Running"><br>
+<br>
  <img src="https://user-images.githubusercontent.com/95635242/159989601-9dc60519-04ca-40f3-b381-f65d32445a48.png" width="400" title="Running"><br>
 <br>
 <img src="https://user-images.githubusercontent.com/95635242/159987770-24328730-c226-42c8-8a25-b795a759a513.png" width="400" title="Menu1"><br>
