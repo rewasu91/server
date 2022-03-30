@@ -37,7 +37,6 @@ exit 0
 fi
 
 ipadd=$(curl -s ipinfo.io/ip);
-MYIP=$(wget -qO- ipinfo.io/ip);
 IP=$( curl -s ipinfo.io/ip );
 clear
 source /var/lib/Kaizen/ipvps.conf
@@ -48,10 +47,6 @@ domain=$(cat /etc/v2ray/domain)
 fi
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
-
-MYIP=$(curl -sS ipv4.icanhazip.com)
-clear
-domain=$(cat /etc/xray/domain)
 
 tls=$( cat /etc/v2ray/vless.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/       //g' );
 none=$( cat /etc/v2ray/vnone.json | grep port | sed 's/"//g' | sed 's/port//g' | sed 's/://g' | sed 's/,//g' | sed 's/       //g');
