@@ -60,7 +60,7 @@ NUMBER_OF_CLIENTS=$( grep -c -E "^#DEPAN " "/etc/xray/xrayxtls.json" )
 	echo "► Sila pilih akaun yang anda ingin perbaharui"
 	echo "► Tekan CTRL+C untuk keluar"
 	echo -e "==============================="
-	grep -E "^### " "/etc/xray/xrayxtls.json" | cut -d ' ' -f 2-8 | nl -s ') '
+	grep -E "^#DEPAN " "/etc/xray/xrayxtls.json" | cut -d ' ' -f 2-8 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "► Sila pilih nombor akaun yang ingin perbaharui [1]: " CLIENT_NUMBER
